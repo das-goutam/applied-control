@@ -1,0 +1,30 @@
+name: Suggest an entry
+description: Propose a paper, blog post, report, or talk about a deployed control system.
+labels: [suggestion]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Link
+      description: A stable link to the primary source (DOI, arXiv, agency repository, or official blog).
+    validations:
+      required: true
+  - type: input
+    id: org
+    attributes:
+      label: Organizations
+      description: Who built and deployed the system.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Deployment evidence
+      description: Where does the source show the controller ran on real hardware, in production, in flight, or in patients?
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: Control methods involved, related entries, or why this stands out.
