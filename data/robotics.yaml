@@ -1,0 +1,351 @@
+# Robotics. Schema and rules: see CONTRIBUTING.md.
+
+- title: "Starting on the Right Foot with Reinforcement Learning"
+  url: https://bostondynamics.com/blog/starting-on-the-right-foot-with-reinforcement-learning/
+  org: ["Boston Dynamics"]
+  year: 2024
+  type: blog
+  topic: "Legged locomotion"
+  methods: ["reinforcement learning", "MPC"]
+  stage: production
+  summary: "Boston Dynamics embedded an RL-trained locomotion policy within Spot's existing MPC controller, replacing parallel MPC instances, and shipped it to customers in software release 4.0."
+
+- title: "Perceptive Locomotion Through Nonlinear Model-Predictive Control"
+  url: https://doi.org/10.1109/TRO.2023.3275384
+  org: ["ETH Zurich"]
+  year: 2023
+  type: paper
+  topic: "Legged locomotion"
+  methods: ["nonlinear MPC"]
+  stage: field
+  summary: "Nonlinear MPC for ANYmal that converts perceived terrain into convex foothold regions and signed-distance collision constraints, validated by dynamic climbing over rough terrain on the real robot."
+
+- title: "Learning robust perceptive locomotion for quadrupedal robots in the wild"
+  url: https://doi.org/10.1126/scirobotics.abk2822
+  org: ["ETH Zurich", "KAIST", "Intel"]
+  year: 2022
+  type: paper
+  topic: "Legged locomotion"
+  methods: ["reinforcement learning", "state estimation"]
+  stage: field
+  summary: "ANYmal policy fusing proprioception with exteroceptive height maps through a learned belief encoder, deployed outdoors across seasons and finishing an hour-long Alpine hike in human-recommended time."
+
+- title: "Blind Bipedal Stair Traversal via Sim-to-Real Reinforcement Learning"
+  url: https://roboticsproceedings.org/rss17/p061.html
+  org: ["Oregon State University"]
+  year: 2021
+  type: paper
+  topic: "Legged locomotion"
+  methods: ["reinforcement learning"]
+  stage: field
+  summary: "Cassie biped learned blind stair traversal through sim-to-real RL with randomized stair terrain, relying only on proprioception to handle diverse real-world staircases."
+
+- title: "RMA: Rapid Motor Adaptation for Legged Robots"
+  url: https://arxiv.org/abs/2107.04034
+  org: ["UC Berkeley", "Carnegie Mellon University", "Meta"]
+  year: 2021
+  type: paper
+  topic: "Legged locomotion"
+  methods: ["reinforcement learning", "adaptive control"]
+  stage: field
+  summary: "Unitree A1 quadruped combines an RL base policy with an online adaptation module estimating environment factors from proprioceptive history, walking zero-shot on sand, grass, stairs, and slippery ground."
+
+- title: "Learning quadrupedal locomotion over challenging terrain"
+  url: https://doi.org/10.1126/scirobotics.abc5986
+  org: ["ETH Zurich", "KAIST", "Intel"]
+  year: 2020
+  type: paper
+  topic: "Legged locomotion"
+  methods: ["reinforcement learning", "imitation learning"]
+  stage: field
+  summary: "Proprioceptive ANYmal controller trained by teacher-student RL with a terrain curriculum, deployed zero-shot over mud, snow, rubble, vegetation, and flowing water in natural field trials."
+
+- title: "Learning agile and dynamic motor skills for legged robots"
+  url: https://doi.org/10.1126/scirobotics.aau5872
+  org: ["ETH Zurich", "Intel"]
+  year: 2019
+  type: paper
+  topic: "Legged locomotion"
+  methods: ["reinforcement learning", "system identification"]
+  stage: field
+  summary: "ANYmal locomotion policies trained with RL in simulation, using a learned actuator network for realism, transferred to hardware for faster running and fall recovery beyond prior model-based controllers."
+
+- title: "Dynamic Locomotion in the MIT Cheetah 3 Through Convex Model-Predictive Control"
+  url: https://doi.org/10.1109/IROS.2018.8594448
+  org: ["MIT"]
+  year: 2018
+  type: paper
+  topic: "Legged locomotion"
+  methods: ["MPC", "convex optimization"]
+  stage: field
+  summary: "Cheetah 3 quadruped runs multiple gaits, galloping up to 3 m/s on hardware, using a single-rigid-body MPC that solves a convex QP for ground reaction forces at 25-50 Hz."
+
+- title: "Large Behavior Models and Atlas Find New Footing"
+  url: https://bostondynamics.com/blog/large-behavior-models-atlas-find-new-footing/
+  org: ["Boston Dynamics", "Toyota Research Institute"]
+  year: 2025
+  type: blog
+  topic: "Humanoids & whole-body control"
+  methods: ["imitation learning", "whole-body control"]
+  stage: field
+  summary: "A roughly 450M-parameter language-conditioned diffusion transformer, trained mainly on VR teleoperation data, controls the full Atlas humanoid at 30 Hz for long-horizon manipulation such as sorting Spot parts on hardware."
+
+- title: "Training a Whole-Body Control Foundation Model"
+  url: https://www.agilityrobotics.com/content/training-a-whole-body-control-foundation-model
+  org: ["Agility Robotics"]
+  year: 2025
+  type: blog
+  topic: "Humanoids & whole-body control"
+  methods: ["reinforcement learning", "whole-body control"]
+  stage: field
+  summary: "Agility trained a sub-million-parameter LSTM whole-body controller for Digit purely with RL in Isaac Sim, transferring zero-shot to hardware for walking and heavy object handling."
+
+- title: "Learning agile soccer skills for a bipedal robot with deep reinforcement learning"
+  url: https://doi.org/10.1126/scirobotics.adi8022
+  org: ["Google DeepMind"]
+  year: 2024
+  type: paper
+  topic: "Humanoids & whole-body control"
+  methods: ["reinforcement learning"]
+  stage: field
+  summary: "Miniature humanoids learned agile soccer skills through deep RL and skill distillation in simulation, then transferred zero-shot to real robots playing one-versus-one matches."
+
+- title: "Real-world humanoid locomotion with reinforcement learning"
+  url: https://doi.org/10.1126/scirobotics.adi9579
+  org: ["UC Berkeley"]
+  year: 2024
+  type: paper
+  topic: "Humanoids & whole-body control"
+  methods: ["reinforcement learning"]
+  stage: field
+  summary: "Causal transformer policy trained by large-scale RL in randomized simulation, deployed zero-shot on the full-size Digit humanoid outdoors on sidewalks, grass, and slopes while rejecting pushes."
+
+- title: "Picking Up Momentum"
+  url: https://bostondynamics.com/blog/picking-up-momentum/
+  org: ["Boston Dynamics"]
+  year: 2023
+  type: blog
+  topic: "Humanoids & whole-body control"
+  methods: ["MPC", "whole-body control"]
+  stage: field
+  summary: "Atlas MPC extended from centroidal dynamics to individual joints, link momenta, and carried-object forces, letting the hydraulic humanoid toss a tool bag mid-jump and carry planks."
+
+- title: "Flipping the Script with Atlas"
+  url: https://bostondynamics.com/blog/flipping-the-script-with-atlas/
+  org: ["Boston Dynamics"]
+  year: 2021
+  type: blog
+  topic: "Humanoids & whole-body control"
+  methods: ["trajectory optimization", "MPC"]
+  stage: field
+  summary: "Atlas parkour pairs a library of offline trajectory-optimized behavior templates with one online MPC that adapts and chains them to perceived obstacles during real course runs."
+
+- title: "Optimization-based locomotion planning, estimation, and control design for the atlas humanoid robot"
+  url: https://doi.org/10.1007/s10514-015-9479-3
+  org: ["MIT"]
+  year: 2016
+  type: paper
+  topic: "Humanoids & whole-body control"
+  methods: ["convex optimization", "LQR/LQG", "Kalman filtering", "whole-body control"]
+  stage: field
+  summary: "MIT's DARPA Robotics Challenge software for Atlas couples a QP walking controller using time-varying LQR cost-to-go with a LIDAR-aided EKF, enabling precise rough-terrain walking in post-Trials lab experiments."
+
+- title: "Team IHMC's Lessons Learned from the DARPA Robotics Challenge Trials"
+  url: https://doi.org/10.1002/rob.21571
+  org: ["IHMC"]
+  year: 2015
+  type: paper
+  topic: "Humanoids & whole-body control"
+  methods: ["whole-body control"]
+  stage: field
+  summary: "IHMC's momentum-based walking controller and coactive operator interface guided Boston Dynamics' Atlas to second place at the 2013 DARPA Robotics Challenge Trials."
+
+- title: "The development of Honda humanoid robot"
+  url: https://doi.org/10.1109/ROBOT.1998.677288
+  org: ["Honda"]
+  year: 1998
+  type: paper
+  topic: "Humanoids & whole-body control"
+  methods: ["ZMP control", "feedforward"]
+  stage: field
+  summary: "Honda's early humanoid prototypes walked on stairs and uneven floors by stabilizing offline gait patterns with floor reaction force, ZMP, and foot-placement control, the basis for ASIMO."
+
+- title: "Deep RL at Scale: Sorting Waste in Office Buildings with a Fleet of Mobile Manipulators"
+  url: https://arxiv.org/abs/2305.03270
+  org: ["Google", "Everyday Robots"]
+  year: 2023
+  type: paper
+  topic: "Manipulation & industrial arms"
+  methods: ["reinforcement learning"]
+  stage: field
+  summary: "Deep RL waste-sorting policy trained and evaluated on 23 mobile manipulators across three office buildings over two years, blending simulation and real-world experience."
+
+- title: "The Franka Emika Robot: A Reference Platform for Robotics Research and Education"
+  url: https://doi.org/10.1109/MRA.2021.3138382
+  org: ["Franka Emika"]
+  year: 2022
+  type: paper
+  topic: "Manipulation & industrial arms"
+  methods: ["impedance control"]
+  stage: production
+  summary: "Describes the commercial Franka Emika Panda arm, with torque sensing in all seven joints and a 1 kHz torque control interface enabling impedance control, widely sold to labs."
+
+- title: "Learning dexterous in-hand manipulation"
+  url: https://doi.org/10.1177/0278364919887447
+  org: ["OpenAI"]
+  year: 2020
+  type: paper
+  topic: "Manipulation & industrial arms"
+  methods: ["reinforcement learning"]
+  stage: field
+  summary: "Shadow Dexterous Hand learned vision-based in-hand object reorientation with RL and heavy domain randomization entirely in simulation, then executed the skill on the physical hand."
+
+- title: "QT-Opt: Scalable Deep Reinforcement Learning for Vision-Based Robotic Manipulation"
+  url: https://arxiv.org/abs/1806.10293
+  org: ["Google", "X", "UC Berkeley"]
+  year: 2018
+  type: paper
+  topic: "Manipulation & industrial arms"
+  methods: ["reinforcement learning"]
+  stage: field
+  summary: "Closed-loop vision-based grasping learned by scalable off-policy Q-learning from 580k real grasp attempts on seven KUKA arms, reaching 96% success on unseen objects."
+
+- title: "The DLR lightweight robot: design and control concepts for robots in human environments"
+  url: https://doi.org/10.1108/01439910710774386
+  org: ["DLR"]
+  year: 2007
+  type: paper
+  topic: "Manipulation & industrial arms"
+  methods: ["impedance control"]
+  stage: production
+  summary: "Outlines joint-torque sensing, impedance control, and collision handling on the DLR lightweight arm, whose technology was transferred to KUKA's commercial lightweight robot line."
+
+- title: "Development of a sweet pepper harvesting robot"
+  url: https://doi.org/10.1002/rob.21937
+  org: ["Wageningen University & Research", "Ben-Gurion University", "Umeå University"]
+  year: 2020
+  type: paper
+  topic: "Mobile, warehouse & field robots"
+  methods: ["visual servoing"]
+  stage: field
+  summary: "SWEEPER sweet pepper harvester guides a six-axis arm and custom end effector with eye-in-hand vision, field-tested in a commercial greenhouse with reported harvest success rates and cycle times."
+
+- title: "Coordinating Hundreds of Cooperative, Autonomous Vehicles in Warehouses"
+  url: https://doi.org/10.1609/aimag.v29i1.2082
+  org: ["Kiva Systems"]
+  year: 2008
+  type: paper
+  topic: "Mobile, warehouse & field robots"
+  methods: ["distributed control"]
+  stage: production
+  summary: "Kiva drive units ferry inventory pods under a centralized job manager with grid A* path planning and heuristic allocation, operating commercially in warehouses with over 100 robots."
+
+- title: "Robots at the tipping point: the road to iRobot Roomba"
+  url: https://doi.org/10.1109/MRA.2006.1598056
+  org: ["iRobot"]
+  year: 2006
+  type: paper
+  topic: "Mobile, warehouse & field robots"
+  methods: ["behavior-based control"]
+  stage: production
+  summary: "An iRobot engineer recounts how Roomba became a mass-market floor-cleaning robot by relying on low-cost sensing and reactive behavior-based coverage control rather than mapping."
+
+- title: "Champion-level drone racing using deep reinforcement learning"
+  url: https://doi.org/10.1038/s41586-023-06419-4
+  org: ["University of Zurich", "Intel"]
+  year: 2023
+  type: paper
+  topic: "Aerial robotics"
+  methods: ["reinforcement learning", "state estimation"]
+  stage: field
+  summary: "Quadrotor racing policy trained with deep RL in simulation plus data-driven residual models, flying on onboard sensing and winning head-to-head races against three human champions, including two world champions."
+
+- title: "Neural-Fly enables rapid learning for agile flight in strong winds"
+  url: https://doi.org/10.1126/scirobotics.abm6597
+  org: ["Caltech"]
+  year: 2022
+  type: paper
+  topic: "Aerial robotics"
+  methods: ["adaptive control", "learning-based control"]
+  stage: field
+  summary: "Quadrotor controller pairs an offline meta-learned aerodynamic basis with online composite adaptation, cutting tracking error in wind-tunnel winds up to 12 m/s and in outdoor flights."
+
+- title: "Inside the mind of the Skydio 2"
+  url: https://medium.com/skydio/inside-the-mind-of-the-skydio-2-b1b78aa6dfa7
+  org: ["Skydio"]
+  year: 2019
+  type: blog
+  topic: "Aerial robotics"
+  methods: ["trajectory optimization", "state estimation"]
+  stage: production
+  summary: "Explains how the Skydio 2 consumer drone fuses six fisheye cameras into motion estimates and 3D maps, then runs a 500 Hz multi-objective planner for autonomous tracking and avoidance."
+
+- title: "A platform for aerial robotics research and demonstration: The Flying Machine Arena"
+  url: https://doi.org/10.1016/j.mechatronics.2013.11.006
+  org: ["ETH Zurich"]
+  year: 2014
+  type: paper
+  topic: "Aerial robotics"
+  methods: ["dynamic inversion", "iterative learning control", "state estimation"]
+  stage: field
+  summary: "ETH's motion-capture quadrocopter testbed with latency-compensating estimation, cascaded feedback-linearizing control, and iterative learning, supporting over 100 public demonstration events in 2011-2012."
+
+- title: "RIO: Robotic-Arm Interactive Orthopedic System MAKOplasty: User Interactive Haptic Orthopedic Robotics"
+  url: https://doi.org/10.1007/978-1-4419-1126-1_10
+  org: ["MAKO Surgical"]
+  year: 2011
+  type: paper
+  topic: "Surgical robots"
+  methods: ["impedance control", "virtual fixtures"]
+  stage: clinical
+  summary: "Describes MAKO's haptic robotic arm for knee arthroplasty, which confines the surgeon-guided cutting tool within CT-planned virtual boundaries, used in clinical procedures."
+
+- title: "The Intuitive™ telesurgery system: overview and application"
+  url: https://doi.org/10.1109/ROBOT.2000.844121
+  org: ["Intuitive Surgical"]
+  year: 2000
+  type: paper
+  topic: "Surgical robots"
+  methods: ["teleoperation"]
+  stage: clinical
+  summary: "Intuitive Surgical engineers describe the da Vinci master-slave telesurgery system, its teleoperation architecture for minimally invasive instruments, and its early clinical application."
+
+- title: "Olaf: Bringing an Animated Character to Life in the Physical World"
+  url: https://arxiv.org/abs/2512.16705
+  org: ["Disney Research"]
+  year: 2025
+  type: paper
+  topic: "Entertainment robots"
+  methods: ["reinforcement learning", "imitation learning"]
+  stage: field
+  summary: "Olaf character walks with animation-guided RL policies that include actuator temperature feedback and footstep-noise rewards, validated on hardware ahead of 2026 Disney park debuts."
+
+- title: "Design and Control of a Bipedal Robotic Character"
+  url: https://roboticsproceedings.org/rss20/p103.html
+  org: ["Disney Research", "Walt Disney Imagineering"]
+  year: 2024
+  type: paper
+  topic: "Entertainment robots"
+  methods: ["reinforcement learning", "imitation learning"]
+  stage: field
+  summary: "Bipedal character controlled by RL policies imitating artist-authored animation, with an animation engine and operator interface enabling live puppeteering in real-time show performances."
+
+- title: "Ocean One: A Robotic Avatar for Oceanic Discovery"
+  url: https://doi.org/10.1109/MRA.2016.2613281
+  org: ["Stanford", "KAUST", "DRASSM"]
+  year: 2016
+  type: paper
+  topic: "Space & underwater robots"
+  methods: ["whole-body control", "teleoperation"]
+  stage: field
+  summary: "Bimanual humanoid diving robot combining whole-body control with haptic teleoperation, used to recover artifacts from the 17th-century La Lune shipwreck at roughly 90 m depth."
+
+- title: "Robonaut 2 - The first humanoid robot in space"
+  url: https://doi.org/10.1109/ICRA.2011.5979830
+  org: ["NASA", "GM"]
+  year: 2011
+  type: paper
+  topic: "Space & underwater robots"
+  methods: ["impedance control"]
+  stage: flight
+  summary: "Describes NASA and GM's dexterous humanoid with torque-sensing compliant joints and impedance control, built for and delivered to the International Space Station in 2011."

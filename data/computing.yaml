@@ -1,0 +1,361 @@
+# Computing, Networks & Marketplaces. Schema and rules: see CONTRIBUTING.md.
+
+- title: "PLB: Congestion Signals are Simple and Effective for Network Load Balancing"
+  url: https://research.google/pubs/plb-congestion-signals-are-simple-and-effective-for-network-load-balancing/
+  org: ["Google"]
+  year: 2022
+  type: paper
+  topic: "Congestion control & networking"
+  methods: ["event-triggered control", "distributed control"]
+  stage: production
+  summary: "Hosts repath congested connections by rehashing the IPv6 flow label when congestion signals persist; used fleetwide at Google, cutting switch utilization imbalance 60% and drops 33%."
+
+- title: "Swift: Delay is Simple and Effective for Congestion Control in the Datacenter"
+  url: https://research.google/pubs/swift-delay-is-simple-and-effective-for-congestion-control-in-the-datacenter/
+  org: ["Google"]
+  year: 2020
+  type: paper
+  topic: "Congestion control & networking"
+  methods: ["AIMD"]
+  stage: production
+  summary: "Delay-target AIMD window control for datacenter transport, deployed in Google datacenters, holding short-RPC tail latency near 50 microseconds at 100 Gbps per server under near-full load."
+
+- title: "Evaluating COPA congestion control for improved video performance"
+  url: https://engineering.fb.com/2019/11/17/video-engineering/copa/
+  org: ["Meta"]
+  year: 2019
+  type: blog
+  topic: "Congestion control & networking"
+  methods: ["queueing control"]
+  stage: field
+  summary: "A/B tests of the delay-targeting Copa controller over QUIC on live Facebook Live uploads, cutting P90 app RTT 27% versus CUBIC and beating BBR on goodput."
+
+- title: "A Google Congestion Control Algorithm for Real-Time Communication"
+  url: https://datatracker.ietf.org/doc/html/draft-ietf-rmcat-gcc-02
+  org: ["Google", "Politecnico di Bari"]
+  year: 2016
+  type: standard
+  topic: "Congestion control & networking"
+  methods: ["Kalman filtering", "AIMD"]
+  stage: production
+  summary: "Specifies WebRTC's delay-based rate control: a Kalman filter tracks queuing-delay trend, an adaptive-threshold overuse detector, and AIMD rate updates, shipped in Chrome since M23 and Hangouts."
+
+- title: "BBR: Congestion-Based Congestion Control"
+  url: https://queue.acm.org/detail.cfm?id=3022184
+  org: ["Google"]
+  year: 2016
+  type: paper
+  topic: "Congestion control & networking"
+  methods: ["state estimation", "queueing control"]
+  stage: production
+  summary: "Paces TCP senders from running estimates of bottleneck bandwidth and minimum RTT; all Google B4 WAN TCP traffic moved to BBR, and YouTube trials cut median RTT 53%."
+
+- title: "Congestion Control for Large-Scale RDMA Deployments"
+  url: https://www.microsoft.com/en-us/research/publication/congestion-control-for-large-scale-rdma-deployments/
+  org: ["Microsoft", "Mellanox"]
+  year: 2015
+  type: paper
+  topic: "Congestion control & networking"
+  methods: ["AIMD"]
+  stage: production
+  summary: "DCQCN, an ECN-driven RoCEv2 rate controller implemented in Mellanox NICs and tuned with a fluid model of the closed loop, was being deployed across Microsoft datacenters at publication."
+
+- title: "Learning in situ: a randomized experiment in video streaming"
+  url: https://www.usenix.org/conference/nsdi20/presentation/yan
+  org: ["Stanford"]
+  year: 2020
+  type: paper
+  topic: "Video streaming & adaptive bitrate"
+  methods: ["MPC", "learning-based control"]
+  stage: field
+  summary: "Fugu couples an MPC bitrate controller with a transmission-time predictor trained on live data, evaluated in a randomized trial on the public Puffer service with 63,508 viewers."
+
+- title: "Real-world Video Adaptation with Reinforcement Learning"
+  url: https://arxiv.org/abs/2008.12858
+  org: ["Meta", "MIT"]
+  year: 2020
+  type: paper
+  topic: "Video streaming & adaptive bitrate"
+  methods: ["reinforcement learning"]
+  stage: production
+  summary: "Trains RL bitrate-adaptation policies for Facebook's web video player and tests them in a week-long worldwide deployment covering over 30 million streaming sessions."
+
+- title: "A Buffer-Based Approach to Rate Adaptation: Evidence from a Large Video Streaming Service"
+  url: https://doi.org/10.1145/2619239.2626296
+  org: ["Netflix", "Stanford"]
+  year: 2014
+  type: paper
+  topic: "Video streaming & adaptive bitrate"
+  methods: ["queueing control"]
+  stage: production
+  summary: "Picks video bitrate as a function of playback buffer occupancy instead of throughput forecasts. A/B tests in the Netflix client with millions of users cut rebuffers 10-20%."
+
+- title: "What's new with Robinhood, our in-house load balancing service"
+  url: https://dropbox.tech/infrastructure/robinhood-in-house-load-balancing-service
+  org: ["Dropbox"]
+  year: 2024
+  type: blog
+  topic: "Autoscaling & resource management"
+  methods: ["PID", "distributed control"]
+  stage: production
+  summary: "A PID controller per node adjusts endpoint weights toward the service's mean utilization; running in every Dropbox datacenter, it shrank some large fleets by 25%."
+
+- title: "Transparent memory offloading: more memory at a fraction of the cost and power"
+  url: https://engineering.fb.com/2022/06/20/data-infrastructure/transparent-memory-offloading-more-memory-at-a-fraction-of-the-cost-and-power/
+  org: ["Meta"]
+  year: 2022
+  type: blog
+  topic: "Autoscaling & resource management"
+  methods: ["PID"]
+  stage: production
+  summary: "Senpai proportionally sets memory reclaim from how far kernel pressure-stall readings sit below target, offloading cold pages; across millions of Meta servers it saved 20-32% memory."
+
+- title: "Autopilot: workload autoscaling at Google"
+  url: https://doi.org/10.1145/3342195.3387524
+  org: ["Google"]
+  year: 2020
+  type: paper
+  topic: "Autoscaling & resource management"
+  methods: ["learning-based control", "adaptive control"]
+  stage: production
+  summary: "Automatically sets task counts and per-task CPU and memory limits from usage history; jobs on it cover 48% of fleet usage, halving slack and cutting severe OOMs tenfold."
+
+- title: "Thunderbolt: Throughput-Optimized, Quality-of-Service-Aware Power Capping at Scale"
+  url: https://www.usenix.org/conference/osdi20/presentation/li-shaohong
+  org: ["Google"]
+  year: 2020
+  type: paper
+  topic: "Autoscaling & resource management"
+  methods: ["AIMD"]
+  stage: production
+  summary: "Two-threshold multiplicative-decrease, randomized-unthrottle CPU bandwidth control throttles batch tasks to keep power safe; running in multiple Google clusters, enabling 9-25% oversubscription."
+
+- title: "Unimog - Cloudflare's edge load balancer"
+  url: https://blog.cloudflare.com/unimog-cloudflares-edge-load-balancer/
+  org: ["Cloudflare"]
+  year: 2020
+  type: blog
+  topic: "Autoscaling & resource management"
+  methods: ["feedback control"]
+  stage: production
+  summary: "A control loop reassigns forwarding-table buckets so each edge server's measured load converges to a common level; in production over a year with visibly uniform CPU."
+
+- title: "Software-defined far memory in warehouse-scale computers"
+  url: https://research.google/pubs/software-defined-far-memory-in-warehouse-scale-computers/
+  org: ["Google"]
+  year: 2019
+  type: paper
+  topic: "Autoscaling & resource management"
+  methods: ["learning-based control"]
+  stage: production
+  summary: "Compresses cold pages under a promotion-rate SLO, with node agents and fleet-level autotuning adjusting coldness thresholds; deployed across Google since 2016, serving thousands of services."
+
+- title: "PerfIso: Performance Isolation for Commercial Latency-Sensitive Services"
+  url: https://www.usenix.org/conference/atc18/presentation/iorgulescu
+  org: ["Microsoft"]
+  year: 2018
+  type: paper
+  topic: "Autoscaling & resource management"
+  methods: ["feedback control"]
+  stage: production
+  summary: "Grows or shrinks batch-job cores to hold a buffer of idle cores for Bing search; used three years on 90,000+ servers, lifting off-peak CPU use from 21% to 66%."
+
+- title: "Dynamo: Facebook's Data Center-Wide Power Management System"
+  url: https://research.facebook.com/publications/dynamo-facebooks-data-center-wide-power-management-system/
+  org: ["Meta"]
+  year: 2016
+  type: paper
+  topic: "Autoscaling & resource management"
+  methods: ["distributed control", "event-triggered control"]
+  stage: production
+  summary: "Hierarchical power-capping controllers with three-band hysteresis sample power every few seconds; run in all Facebook datacenters, preventing 18 potential outages in six months."
+
+- title: "Kraken: Leveraging Live Traffic Tests to Identify and Resolve Resource Utilization Bottlenecks in Large Scale Web Services"
+  url: https://www.usenix.org/conference/osdi16/technical-sessions/presentation/veeraraghavan
+  org: ["Meta"]
+  year: 2016
+  type: paper
+  topic: "Autoscaling & resource management"
+  methods: ["feedback control"]
+  stage: production
+  summary: "Shifts live user traffic onto target clusters in steps, monitoring latency and error feedback to stop before unhealthy load; in production three years, raising utilization over 20%."
+
+- title: "Making Facebook's software infrastructure more energy efficient with Autoscale"
+  url: https://engineering.fb.com/2014/08/08/production-engineering/making-facebook-s-software-infrastructure-more-energy-efficient-with-autoscale/
+  org: ["Meta"]
+  year: 2014
+  type: blog
+  topic: "Autoscaling & resource management"
+  methods: ["PID", "system identification"]
+  stage: production
+  summary: "A PI controller, tuned on a fitted piecewise-linear CPU-versus-load model, sizes the active web-server pool; production clusters saved 10-15% power daily, up to 27% overnight."
+
+- title: "Cinnamon Auto-Tuner: Adaptive Concurrency in the Wild"
+  url: https://www.uber.com/blog/cinnamon-auto-tuner-adaptive-concurrency-in-the-wild/
+  org: ["Uber"]
+  year: 2023
+  type: blog
+  topic: "Load shedding & overload control"
+  methods: ["queueing control", "adaptive control"]
+  stage: production
+  summary: "A TCP-Vegas-style loop with filtered p90 latency and Little's-law checks tunes inflight limits; during a real downstream slowdown it throttled traffic and averted cascading failure."
+
+- title: "Cinnamon: Using Century Old Tech to Build a Mean Load Shedder"
+  url: https://www.uber.com/blog/cinnamon-using-century-old-tech-to-build-a-mean-load-shedder/
+  org: ["Uber"]
+  year: 2023
+  type: blog
+  topic: "Load shedding & overload control"
+  methods: ["PID", "queueing control"]
+  stage: production
+  summary: "Uber's Go load shedder uses a PID loop to set the request rejection fraction by priority; production tests held goodput near capacity at 300% overload."
+
+- title: "Hodor: Overload scenarios and the evolution of their detection and handling"
+  url: https://engineering.linkedin.com/blog/2023/hodor--overload-scenarios-and-the-evolution-of-their-detection-a
+  org: ["LinkedIn"]
+  year: 2023
+  type: blog
+  topic: "Load shedding & overload control"
+  methods: ["queueing control"]
+  stage: production
+  summary: "Adds GC and threadpool-wait detectors plus latency confirmation, escalating priority-tiered shedding until recovery; runs on 1000+ LinkedIn services and has stopped hundreds of overloads."
+
+- title: "Amazon DynamoDB: A Scalable, Predictably Performant, and Fully Managed NoSQL Database Service"
+  url: https://www.usenix.org/conference/atc22/presentation/elhemali
+  org: ["AWS"]
+  year: 2022
+  type: paper
+  topic: "Load shedding & overload control"
+  methods: ["PID", "distributed control"]
+  stage: production
+  summary: "Reports DynamoDB's token-bucket admission control, proportional-control adaptive capacity that boosted throttled partitions, and later global admission control, used in the managed production service."
+
+- title: "Hodor: Detecting and addressing overload in LinkedIn microservices"
+  url: https://engineering.linkedin.com/blog/2022/hodor--detecting-and-addressing-overload-in-linkedin-microservic
+  org: ["LinkedIn"]
+  year: 2022
+  type: blog
+  topic: "Load shedding & overload control"
+  methods: ["adaptive control"]
+  stage: production
+  summary: "Detects CPU overload from heartbeat-thread delays and adapts a concurrency limit with probing and exponential backoff; onboarded across most LinkedIn microservices, starting with flagship Voyager."
+
+- title: "Introducing QALM, Uber's QoS Load Management Framework"
+  url: https://www.uber.com/blog/qalm-qos-load-management-framework/
+  org: ["Uber"]
+  year: 2018
+  type: blog
+  topic: "Load shedding & overload control"
+  methods: ["queueing control"]
+  stage: production
+  summary: "CoDel-style per-endpoint queues detect overload from minimum queueing delay and shed requests by criticality; adopted by core Uber production services as YARPC middleware."
+
+- title: "Overload Control for Scaling WeChat Microservices"
+  url: https://arxiv.org/abs/1806.04075
+  org: ["Tencent"]
+  year: 2018
+  type: paper
+  topic: "Load shedding & overload control"
+  methods: ["AIMD", "queueing control"]
+  stage: production
+  summary: "DAGOR flags overload from average queuing time and moves a priority admission threshold with multiplicative decrease and additive increase; ran five years in WeChat's backend."
+
+- title: "Performance Under Load"
+  url: https://netflixtechblog.medium.com/performance-under-load-3e6fa9a60581
+  org: ["Netflix"]
+  year: 2018
+  type: blog
+  topic: "Load shedding & overload control"
+  methods: ["queueing control", "adaptive control"]
+  stage: production
+  summary: "Adapts server concurrency limits from a latency gradient borrowed from TCP congestion control, rejecting excess requests, as part of a Netflix production rollout."
+
+- title: "Handling Overload"
+  url: https://sre.google/sre-book/handling-overload/
+  org: ["Google"]
+  year: 2016
+  type: report
+  topic: "Load shedding & overload control"
+  methods: ["distributed control"]
+  stage: production
+  summary: "Google SRE chapter on client-side adaptive throttling: clients compare requests to backend accepts and reject locally with rising probability, keeping overloaded backends stable in production."
+
+- title: "Fail at Scale: Reliability in the face of rapid change"
+  url: https://queue.acm.org/detail.cfm?id=2839461
+  org: ["Meta"]
+  year: 2015
+  type: paper
+  topic: "Load shedding & overload control"
+  methods: ["queueing control"]
+  stage: production
+  summary: "Describes Facebook's CoDel-variant queue timeouts plus adaptive LIFO for overloaded servers, built into Wangle/Thrift and HHVM and used broadly with fixed defaults."
+
+- title: "Smart Fast Finish: Preventing Overdelivery via Daily Budget Pacing at DoorDash"
+  url: https://arxiv.org/abs/2509.07929
+  org: ["DoorDash"]
+  year: 2025
+  type: paper
+  topic: "Ads, marketplaces & inventory"
+  methods: ["adaptive control", "feedforward"]
+  stage: production
+  summary: "Sets each campaign's end-of-day throttle ramp from its historical overspend, guarding against a positive feedback loop; in use at DoorDash, an A/B test cut overdelivery from 7.0% to 4.7%."
+
+- title: "A Better Match for Drivers and Riders: Reinforcement Learning at Lyft"
+  url: https://arxiv.org/abs/2310.13810
+  org: ["Lyft"]
+  year: 2023
+  type: paper
+  topic: "Ads, marketplaces & inventory"
+  methods: ["reinforcement learning", "dynamic programming"]
+  stage: production
+  summary: "Online RL learns driver future-earnings values in real time to steer rider-driver matching; switchback tests in most markets preceded a 2021 global rollout worth $30M+ yearly."
+
+- title: "Deep Inventory Management"
+  url: https://arxiv.org/abs/2210.03137
+  org: ["Amazon"]
+  year: 2022
+  type: paper
+  topic: "Ads, marketplaces & inventory"
+  methods: ["reinforcement learning", "optimal control"]
+  stage: production
+  summary: "Model-based deep RL through a differentiable simulator sets periodic-review buy quantities; a 26-week randomized trial on about 10K products cut inventory 12% with unchanged revenue."
+
+- title: "Deep Reinforcement Learning for Sponsored Search Real-time Bidding"
+  url: https://arxiv.org/abs/1803.00259
+  org: ["Alibaba"]
+  year: 2018
+  type: paper
+  topic: "Ads, marketplaces & inventory"
+  methods: ["reinforcement learning"]
+  stage: production
+  summary: "Formulates hourly bid-model selection as a robust MDP solved by deep RL, extended to multiple agents; deployed on Alibaba's e-commerce search auctions with online A/B testing."
+
+- title: "Feedback Control of Real-Time Display Advertising"
+  url: https://arxiv.org/abs/1603.01055
+  org: ["UCL", "YOYI", "BigTree"]
+  year: 2016
+  type: paper
+  topic: "Ads, marketplaces & inventory"
+  methods: ["PID"]
+  stage: production
+  summary: "Compares PID and water-level controllers that adjust RTB bids to hold KPIs such as eCPC at reference; PID ran live on the BigTree mobile DSP with A/B gains."
+
+- title: "Smart Pacing for Effective Online Ad Campaign Optimization"
+  url: https://arxiv.org/abs/1506.05851
+  org: ["Yahoo"]
+  year: 2015
+  type: paper
+  topic: "Ads, marketplaces & inventory"
+  methods: ["feedback control", "adaptive control"]
+  stage: production
+  summary: "Adjusts layered, response-rate-tiered bid probabilities each slot from spend feedback to pace budgets; deployed in Yahoo's DSP, online A/B tests cut eCPC up to 79%."
+
+- title: "Budget Pacing for Targeted Online Advertisements at LinkedIn"
+  url: https://doi.org/10.1145/2623330.2623366
+  org: ["LinkedIn"]
+  year: 2014
+  type: paper
+  topic: "Ads, marketplaces & inventory"
+  methods: ["feedback control", "feedforward"]
+  stage: production
+  summary: "Throttles each campaign's auction participation rate, tuned against a spend plan built from forecast supply, so budgets last the day; evaluated in experiments on LinkedIn's ad marketplace."

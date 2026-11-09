@@ -1,0 +1,361 @@
+# Aerospace & Space. Schema and rules: see CONTRIBUTING.md.
+
+- title: "Path to First Flight of Adaptive Augmenting Control on NASA's Space Launch System for Artemis I"
+  url: https://airdrive.eventsair.com/eventsairwesteuprod/production-atpi-public/f897c45dbb804d90bb069fda35739183
+  org: ["NASA MSFC", "NASA NESC"]
+  year: 2023
+  type: paper
+  topic: "Launch & landing"
+  methods: ["adaptive control", "gain scheduling"]
+  stage: flight
+  summary: "Traces NASA's adaptive augmenting controller, a multiplicative gain adjustment atop the SLS baseline autopilot, from concept to the Artemis I launch, where it behaved within preflight predictions."
+
+- title: "Post-Flight Performance Analysis of Navigation and Advanced Guidance Algorithms on a Terrestrial Suborbital Rocket Flight"
+  url: https://ntrs.nasa.gov/citations/20210023718
+  org: ["NASA", "Draper", "Blue Origin"]
+  year: 2022
+  type: paper
+  topic: "Launch & landing"
+  methods: ["Kalman filtering", "convex optimization", "trajectory optimization"]
+  stage: flight
+  summary: "NASA, Draper and Blue Origin assess SPLICE terrain-relative navigation and successive-convexification powered-descent guidance that ran onboard New Shepard in open loop, converging within three seconds."
+
+- title: "Autonomous Precision Landing of Space Rockets"
+  url: https://www.nationalacademies.org/read/23659/chapter/10
+  org: ["SpaceX"]
+  year: 2017
+  type: paper
+  topic: "Launch & landing"
+  methods: ["convex optimization", "trajectory optimization"]
+  stage: flight
+  summary: "SpaceX's principal landing engineer explains Falcon 9 booster landing guidance, which solves a convex trajectory problem onboard in real time using CVXGEN-generated flight code."
+
+- title: "Customized Real-Time Interior-Point Methods for Onboard Powered-Descent Guidance"
+  url: https://doi.org/10.2514/1.G001480
+  org: ["University of Washington", "NASA JPL"]
+  year: 2017
+  type: paper
+  topic: "Launch & landing"
+  methods: ["convex optimization"]
+  stage: flight
+  summary: "Generated custom second-order-cone interior-point solvers fast and deterministic enough for flight computers, with this solver family flown onboard Masten's Xombie rocket during 2012-2013 G-FOLD tests."
+
+- title: "Implementation and Experimental Demonstration of Onboard Powered-Descent Guidance"
+  url: https://doi.org/10.2514/1.G000399
+  org: ["NASA JPL", "Masten Space Systems"]
+  year: 2017
+  type: paper
+  topic: "Launch & landing"
+  methods: ["convex optimization", "trajectory optimization"]
+  stage: flight
+  summary: "JPL's G-FOLD lossless-convexification divert guidance computed fuel-optimal trajectories for a vertical-takeoff, vertical-landing rocket across eight terrestrial flights, five of them solved onboard."
+
+- title: "In-Flight Suppression of a Destabilized F/A-18 Structural Mode Using the Space Launch System Adaptive Augmenting Control System"
+  url: https://ntrs.nasa.gov/citations/20150002959
+  org: ["NASA MSFC", "NASA Armstrong"]
+  year: 2015
+  type: paper
+  topic: "Launch & landing"
+  methods: ["adaptive control", "dynamic inversion"]
+  stage: flight
+  summary: "NASA flew the SLS adaptive augmenting controller on an F/A-18 mimicking launch-vehicle dynamics, deliberately destabilizing a structural mode in flight and showing the adaptation suppress it."
+
+- title: "Orion Artemis I Entry Performance"
+  url: https://ntrs.nasa.gov/citations/20240000024
+  org: ["NASA JSC"]
+  year: 2024
+  type: paper
+  topic: "Planetary EDL & landers"
+  methods: ["predictor-corrector guidance"]
+  stage: flight
+  summary: "Flight-data assessment of Orion's predictive skip-entry guidance and bank-angle control on Artemis I, which steered the uncrewed capsule through a skip re-entry to its splashdown target."
+
+- title: "Flying a Helicopter on Mars: How Ingenuity's Flights were Planned, Executed, and Analyzed"
+  url: https://doi.org/10.1109/AERO53065.2022.9843813
+  org: ["NASA JPL"]
+  year: 2022
+  type: paper
+  topic: "Planetary EDL & landers"
+  methods: ["state estimation"]
+  stage: flight
+  summary: "How JPL planned, flew, and analyzed Ingenuity's autonomous Mars helicopter flights, whose onboard flight control and visual-inertial state estimation operated in thin Martian air."
+
+- title: "Mars 2020 Lander Vision System Flight Performance"
+  url: https://doi.org/10.2514/6.2022-1214
+  org: ["NASA JPL"]
+  year: 2022
+  type: paper
+  topic: "Planetary EDL & landers"
+  methods: ["state estimation"]
+  stage: flight
+  summary: "Flight results of Perseverance's Lander Vision System, which matched descent images to an orbital map and fused them with inertial data, enabling hazard-avoiding touchdown about 5 m from target."
+
+- title: "Post-Flight EDL Entry Guidance Performance of the 2011 Mars Science Laboratory Mission"
+  url: https://ntrs.nasa.gov/citations/20130009144
+  org: ["NASA JSC", "NASA JPL"]
+  year: 2013
+  type: paper
+  topic: "Planetary EDL & landers"
+  methods: ["gain scheduling"]
+  stage: flight
+  summary: "Post-flight review of Curiosity's Apollo-derived bank-angle entry guidance, the first guided Mars entry, which landed about 2.2 km from target inside a 19 by 7 km ellipse."
+
+- title: "The Mars exploration rovers descent image motion estimation system"
+  url: https://doi.org/10.1109/MIS.2004.18
+  org: ["NASA JPL"]
+  year: 2004
+  type: paper
+  topic: "Planetary EDL & landers"
+  methods: ["state estimation"]
+  stage: flight
+  summary: "JPL's descent camera system that estimated horizontal velocity from successive images during the 2004 Spirit and Opportunity landings, informing whether to fire transverse rockets before airbag impact."
+
+- title: "Apollo lunar descent guidance"
+  url: https://ntrs.nasa.gov/citations/19740044219
+  org: ["Draper Laboratory", "NASA"]
+  year: 1974
+  type: paper
+  topic: "Planetary EDL & landers"
+  methods: ["feedforward"]
+  stage: flight
+  summary: "Draper's onboard Lunar Module descent guidance, which steered the Apollo lunar landings by tracking polynomial reference trajectories to terminal targets and let the crew redesignate the landing site."
+
+- title: "JWST Fine Guidance Sensor Commissioning and Performance During Operations"
+  url: https://ntrs.nasa.gov/citations/20250002384
+  org: ["NASA GSFC", "STScI", "CSA"]
+  year: 2025
+  type: paper
+  topic: "Spacecraft attitude & orbit control"
+  methods: ["state estimation"]
+  stage: operations
+  summary: "Commissioning and operations record of JWST's Fine Guidance Sensor, which feeds guide-star measurements to the attitude control loop every 64 ms and sustains roughly 1 milliarcsecond pointing stability."
+
+- title: "An Overview of the Artemis I Navigation Performance"
+  url: https://ntrs.nasa.gov/citations/20230000714
+  org: ["NASA JSC", "Lockheed Martin"]
+  year: 2023
+  type: paper
+  topic: "Spacecraft attitude & orbit control"
+  methods: ["Kalman filtering", "state estimation"]
+  stage: flight
+  summary: "Flight performance of Orion's Artemis I navigation system, built around four extended Kalman filters for atmospheric flight, Earth orbit, cislunar cruise and attitude, plus optical navigation and fault management."
+
+- title: "DART Guidance, Navigation and Control: System Performance and Challenges"
+  url: https://airdrive.eventsair.com/eventsairwesteuprod/production-atpi-public/6f70f91b13ce4843a5e1056855f15df7
+  org: ["JHU APL", "NASA"]
+  year: 2023
+  type: paper
+  topic: "Spacecraft attitude & orbit control"
+  methods: ["state estimation"]
+  stage: flight
+  summary: "APL describes DART's three-axis attitude control and SMART Nav autonomous optical terminal guidance, including in-flight fixes for structural interaction and camera misalignment, ahead of the 2022 Dimorphos impact."
+
+- title: "The K2 Mission: Characterization and Early Results"
+  url: https://arxiv.org/abs/1402.5163
+  org: ["NASA Ames", "Ball Aerospace"]
+  year: 2014
+  type: paper
+  topic: "Spacecraft attitude & orbit control"
+  methods: ["fault-tolerant control"]
+  stage: operations
+  summary: "After two reaction wheels failed, Kepler was flown pointing in its orbital plane so solar pressure balanced about roll, with thrusters trimming drift and unloading momentum, enabling K2."
+
+- title: "Spaceborne Autonomous Formation-Flying Experiment on the PRISMA Mission"
+  url: https://doi.org/10.2514/1.55638
+  org: ["DLR", "Swedish Space Corporation"]
+  year: 2012
+  type: paper
+  topic: "Spacecraft attitude & orbit control"
+  methods: ["Kalman filtering", "optimal control"]
+  stage: flight
+  summary: "DLR's SAFE experiment flew autonomous two-satellite formation control on PRISMA, pairing real-time differential-GPS relative navigation with impulsive relative-orbit maneuvers that kept formations accurate to better than 10 m."
+
+- title: "Zero-propellant maneuver guidance"
+  url: https://doi.org/10.1109/MCS.2009.934089
+  org: ["Draper Laboratory", "Naval Postgraduate School", "NASA"]
+  year: 2009
+  type: paper
+  topic: "Spacecraft attitude & orbit control"
+  methods: ["optimal control", "trajectory optimization"]
+  stage: operations
+  summary: "Pseudospectral optimal attitude trajectories let the ISS control moment gyroscopes perform large rotations without thruster propellant, including a 180-degree turn of the station flown in March 2007."
+
+- title: "Hubble Space Telescope Reduced-Gyro Control Law Design, Implementation, and On-Orbit Performance"
+  url: https://ntrs.nasa.gov/citations/20080023344
+  org: ["NASA GSFC", "Lockheed Martin"]
+  year: 2008
+  type: paper
+  topic: "Spacecraft attitude & orbit control"
+  methods: ["fault-tolerant control", "state estimation"]
+  stage: operations
+  summary: "After gyro failures, Hubble engineers built two- and one-gyro pointing modes that substitute magnetometers, star trackers and guidance sensors for missing rate axes, reaching 7 milliarcsecond stability or better."
+
+- title: "Orbital Express Autonomous Rendezvous and Capture Flight Operations, Part 2 of 2: AR&C Exercise 4,5, and End-Of-Life"
+  url: https://doi.org/10.2514/6.2008-6768
+  org: ["Boeing", "DARPA"]
+  year: 2008
+  type: paper
+  topic: "Spacecraft attitude & orbit control"
+  methods: ["state estimation"]
+  stage: flight
+  summary: "Boeing's operations account of the later DARPA Orbital Express exercises, in which the ASTRO servicer autonomously rendezvoused with and captured the NEXTSat client in orbit during 2007."
+
+- title: "Discovery of the Kalman filter as a practical tool for aerospace and industry"
+  url: https://ntrs.nasa.gov/citations/19860003843
+  org: ["NASA Ames"]
+  year: 1985
+  type: report
+  topic: "Spacecraft attitude & orbit control"
+  methods: ["Kalman filtering"]
+  stage: flight
+  summary: "NASA Ames account of adapting Kalman's filter for Apollo circumlunar navigation, yielding the extended and square-root forms, and of its first airborne implementation and flight test."
+
+- title: "Airbus concludes ATTOL with fully autonomous flight tests"
+  url: https://www.airbus.com/en/newsroom/press-releases/2020-06-airbus-concludes-attol-with-fully-autonomous-flight-tests
+  org: ["Airbus"]
+  year: 2020
+  type: blog
+  topic: "Aircraft flight control"
+  methods: ["state estimation"]
+  stage: flight
+  summary: "Airbus flew a commercial airliner through autonomous taxi, takeoff and landing guided by onboard image recognition, closing a two-year program of more than 500 test flights."
+
+- title: "F-35 Flight Control Law Design, Development and Verification"
+  url: https://doi.org/10.2514/6.2018-3516
+  org: ["Lockheed Martin"]
+  year: 2018
+  type: paper
+  topic: "Aircraft flight control"
+  methods: ["dynamic inversion"]
+  stage: production
+  summary: "Lockheed Martin recounts how F-35 flight control software, built on nonlinear dynamic inversion shared across three variants, was designed, verified and cleared through flight test into production."
+
+- title: "AIRBUS state of the art and practices on FDI and FTC in flight control system"
+  url: https://doi.org/10.1016/j.conengprac.2010.12.009
+  org: ["Airbus"]
+  year: 2011
+  type: paper
+  topic: "Aircraft flight control"
+  methods: ["fault-tolerant control", "state estimation"]
+  stage: production
+  summary: "Airbus overview of how its in-service fly-by-wire flight controls detect, isolate and tolerate faults, covering monitoring design, redundancy management and the certification constraints shaping them."
+
+- title: "Flight Test of an L1 Adaptive Controller on the NASA AirSTAR Flight Test Vehicle"
+  url: https://doi.org/10.2514/6.2010-8015
+  org: ["NASA Langley", "UIUC"]
+  year: 2010
+  type: paper
+  topic: "Aircraft flight control"
+  methods: ["adaptive control"]
+  stage: flight
+  summary: "NASA Langley flew an L1 adaptive controller on the AirSTAR dynamically scaled transport model, evaluating its tracking and handling under nominal and deliberately degraded aircraft dynamics."
+
+- title: "Flight Test Results from the NF-15B Intelligent Flight Control System (IFCS) Project with Adaptation to a Simulated Stabilator Failure"
+  url: https://doi.org/10.2514/6.2007-2818
+  org: ["NASA Dryden"]
+  year: 2007
+  type: paper
+  topic: "Aircraft flight control"
+  methods: ["adaptive control", "dynamic inversion", "fault-tolerant control"]
+  stage: flight
+  summary: "Piloted flight tests of NASA's NF-15B intelligent flight control system, a neural-network-adaptive dynamic inversion controller, compensating for a simulated stabilator failure."
+
+- title: "The X-43A Hyper-X Mach 7 Flight 2 Guidance, Navigation, and Control Overview and Flight Test Results"
+  url: https://doi.org/10.2514/6.2005-3275
+  org: ["NASA Dryden", "NASA Langley"]
+  year: 2005
+  type: paper
+  topic: "Aircraft flight control"
+  methods: ["gain scheduling"]
+  stage: flight
+  summary: "Guidance, navigation and control design and flight results for NASA's X-43A, which separated from its booster and held its attitude through the March 2004 Mach 7 scramjet test."
+
+- title: "X-35B STOVL Flight Control Law Design and Flying Qualities"
+  url: https://doi.org/10.2514/6.2002-6018
+  org: ["Lockheed Martin", "BAE Systems"]
+  year: 2002
+  type: paper
+  topic: "Aircraft flight control"
+  methods: ["dynamic inversion"]
+  stage: flight
+  summary: "Lockheed Martin and BAE describe dynamic-inversion-based STOVL flight control for the X-35B, blending lift fan and nozzle effectors, with flying qualities from its hover and vertical-landing flights."
+
+- title: "Triple-triple redundant 777 primary flight computer"
+  url: https://doi.org/10.1109/AERO.1996.495891
+  org: ["Boeing"]
+  year: 1996
+  type: paper
+  topic: "Aircraft flight control"
+  methods: ["fault-tolerant control"]
+  stage: production
+  summary: "Boeing's 777 fly-by-wire primary flight computer uses three channels, each with three dissimilar processors, so flight control stays available after hardware or design faults in airline service."
+
+- title: "AIRBUS A320/A330/A340 electrical flight controls - A family of fault-tolerant systems"
+  url: https://doi.org/10.1109/FTCS.1993.627364
+  org: ["Airbus"]
+  year: 1993
+  type: paper
+  topic: "Aircraft flight control"
+  methods: ["fault-tolerant control"]
+  stage: production
+  summary: "Airbus's fly-by-wire architecture for the A320, A330 and A340, built from dissimilar redundant command and monitor computers so the production airliner family tolerates hardware and software faults."
+
+- title: "Autonomous navigation of stratospheric balloons using reinforcement learning"
+  url: https://doi.org/10.1038/s41586-020-2939-8
+  org: ["Google", "Loon"]
+  year: 2020
+  type: paper
+  topic: "UAVs & drones"
+  methods: ["reinforcement learning"]
+  stage: field
+  summary: "Google and Loon trained a deep reinforcement learning controller that steered superpressure balloons through stratospheric winds, beating Loon's prior controller in a 39-day Pacific flight experiment."
+
+- title: "Flight Control System for NASA's Mars Helicopter"
+  url: https://dartslab.jpl.nasa.gov/References/pdf/2019-mars-heli.pdf
+  org: ["NASA JPL", "NASA Ames"]
+  year: 2019
+  type: paper
+  topic: "UAVs & drones"
+  methods: ["Kalman filtering", "feedforward", "system identification"]
+  stage: flight
+  summary: "JPL details Ingenuity's 500 Hz rotor-pitch control loops, collective-to-motor feedforward and vision-inertial EKF navigation, validated in Mars-atmosphere chamber tests before the helicopter's flights on Mars."
+
+- title: "PX4: A Node-Based Multithreaded Open Source Robotics Framework for Deeply Embedded Platforms"
+  url: https://doi.org/10.1109/ICRA.2015.7140074
+  org: ["ETH Zurich", "PX4"]
+  year: 2015
+  type: paper
+  topic: "UAVs & drones"
+  methods: ["PID", "state estimation"]
+  stage: production
+  summary: "Introduces the PX4 publish-subscribe middleware and modular flight stack that run estimation and control on embedded autopilots, the open-source basis of many research and commercial drones."
+
+- title: "Next-Generation Airborne Collision Avoidance System"
+  url: https://archive.ll.mit.edu/publications/journal/pdf/vol19_no1/19_1_1_Kochenderfer.pdf
+  org: ["MIT Lincoln Laboratory", "FAA"]
+  year: 2012
+  type: paper
+  topic: "Air traffic & collision avoidance"
+  methods: ["dynamic programming", "state estimation"]
+  stage: production
+  summary: "ACAS X casts collision avoidance as a Markov decision process solved offline by dynamic programming into lookup tables; its ACAS Xa variant was approved for European airline carriage in 2025."
+
+- title: "Automatic Ground Collision Avoidance System design, integration, & flight test"
+  url: https://doi.org/10.1109/MAES.2011.5871385
+  org: ["AFRL", "NASA Dryden", "Lockheed Martin"]
+  year: 2011
+  type: paper
+  topic: "Air traffic & collision avoidance"
+  methods: ["trajectory prediction"]
+  stage: flight
+  summary: "AFRL, NASA and Lockheed integrated and flight-tested F-16 automatic ground collision avoidance, which predicts recovery trajectories against terrain data and commands an autonomous fly-up when needed."
+
+- title: "The Traffic Alert and Collision Avoidance System"
+  url: https://archive.ll.mit.edu/publications/journal/pdf/vol16_no2/16_2_04Kuchar.pdf
+  org: ["MIT Lincoln Laboratory", "FAA"]
+  year: 2007
+  type: paper
+  topic: "Air traffic & collision avoidance"
+  methods: ["rule-based logic"]
+  stage: operations
+  summary: "Lincoln Laboratory overview of TCAS, the mandated airborne collision avoidance system on over 25,000 aircraft, covering transponder surveillance, threat detection and coordinated vertical resolution advisories."

@@ -1,0 +1,281 @@
+# Process Industries & Manufacturing. Schema and rules: see CONTRIBUTING.md.
+
+- title: "Origins of Dynamic Matrix Control: The Early Writings of Charles R. Cutler"
+  url: https://psecommunity.org/LAPSE:2025.0700
+  org: ["NTNU", "Shell"]
+  year: 2025
+  type: report
+  topic: "Refining & chemicals"
+  methods: ["MPC"]
+  stage: production
+  summary: "Annotated collection of Charles Cutler's early writings tracing Dynamic Matrix Control from his thesis ideas to its 1973 trials on the catalytic cracker at Shell's New Orleans refinery."
+
+- title: "APC advances FCC unit performance at Pemex Deer Park refinery"
+  url: https://digitalrefining.com/article/1003151/apc-advances-fcc-unit-performance-at-pemex-deer-park-refinery
+  org: ["Pemex Deer Park", "KBC"]
+  year: 2024
+  type: paper
+  topic: "Refining & chemicals"
+  methods: ["MPC", "real-time optimization"]
+  stage: operations
+  summary: "Pemex Deer Park replaced separate SMOC MPC, RTO and quality-estimator tools on its FCC unit with one integrated PACE application spanning over 25 manipulated and 71 controlled variables."
+
+- title: "Rigorous Non-Linear Optimization in Dow's Hydrocarbons Business"
+  url: https://aiche.org/conferences/aiche-spring-meeting-and-global-congress-on-process-safety/2017/proceeding/paper/2d-rigorous-non-linear-optimization-dows-hydrocarbons-business
+  org: ["Dow"]
+  year: 2017
+  type: talk
+  topic: "Refining & chemicals"
+  methods: ["real-time optimization"]
+  stage: operations
+  summary: "Dow reviews the rigorous nonlinear real-time optimization running across most of its steam cracker fleet, covering its support model, performance metrics and the case for first-principles plant models."
+
+- title: "Ethylene Plantwide Control and Optimization"
+  url: https://ieeecss.org/sites/ieeecss/files/2019-06/IoCT2-SS-Lu-1.pdf
+  org: ["Honeywell"]
+  year: 2014
+  type: report
+  topic: "Refining & chemicals"
+  methods: ["MPC", "real-time optimization"]
+  stage: operations
+  summary: "Honeywell's Profit Optimizer coordinates 15 to 30 Profit Controller MPCs per ethylene plant using successively linearized dynamic models, with typical production gains worth 1.5 to 3 million dollars yearly."
+
+- title: "NLMPC: A Platform for Optimal Control of Feed- or Product-Flexible Manufacturing"
+  url: https://doi.org/10.1007/978-3-540-72699-9_30
+  org: ["ExxonMobil"]
+  year: 2007
+  type: paper
+  topic: "Refining & chemicals"
+  methods: ["nonlinear MPC"]
+  stage: operations
+  summary: "ExxonMobil Chemical's in-house nonlinear MPC, built on fundamental state-space models solved by SQP, has handled regulatory and grade-transition control on industrial polymerization plants since 1994."
+
+- title: "Quadratic Programming Solution of Dynamic Matrix Control (QDMC)"
+  url: https://doi.org/10.1080/00986448608911397
+  org: ["Shell"]
+  year: 1986
+  type: paper
+  topic: "Refining & chemicals"
+  methods: ["MPC", "convex optimization"]
+  stage: production
+  summary: "Shell extended DMC to handle input and output constraints by solving a quadratic program online, reporting a pyrolysis furnace temperature application and other Shell unit deployments."
+
+- title: "Model Predictive Heuristic Control: Applications to Industrial Processes"
+  url: https://doi.org/10.1016/0005-1098(78)90001-8
+  org: ["ADERSA"]
+  year: 1978
+  type: paper
+  topic: "Refining & chemicals"
+  methods: ["MPC"]
+  stage: production
+  summary: "ADERSA's IDCOM predictive heuristic control was applied on an FCC distillation column, a 250 MW steam generator, and a PVC plant, an early industrial MPC report."
+
+- title: "Feedback controller design for a spatially distributed system: the paper machine problem"
+  url: https://doi.org/10.1109/TCST.2003.816420
+  org: ["Honeywell", "University of British Columbia"]
+  year: 2003
+  type: paper
+  topic: "Pulp & paper"
+  methods: ["robust control", "distributed control"]
+  stage: production
+  summary: "Honeywell's 2D loop-shaping design for cross-directional paper machine control became a commercial tuning tool and retuned controllers on two industrial machines, stabilizing one of them."
+
+- title: "Practical aspects of model predictive control implementation on an industrial lime kiln"
+  url: https://doi.org/10.23919/ECC.1997.7082518
+  org: ["Noranda", "James Maclaren"]
+  year: 1997
+  type: paper
+  topic: "Pulp & paper"
+  methods: ["MPC"]
+  stage: production
+  summary: "Constrained MPC was implemented on a pulp mill rotary lime kiln to regulate the temperature profile and excess oxygen, targeting lime quality, energy use, and TRS emissions."
+
+- title: "Successful adaptive control of paper machines"
+  url: https://doi.org/10.1016/0005-1098(75)90008-4
+  org: ["ASEA"]
+  year: 1975
+  type: paper
+  topic: "Pulp & paper"
+  methods: ["adaptive control"]
+  stage: production
+  summary: "ASEA engineers report adaptive self-tuning regulators running on industrial paper machine quality loops, an early account of adaptive control succeeding in mill operation."
+
+- title: "Computer Control of a Paper Machine—an Application of Linear Stochastic Control Theory"
+  url: https://doi.org/10.1147/rd.114.0389
+  org: ["IBM", "Billerud"]
+  year: 1967
+  type: paper
+  topic: "Pulp & paper"
+  methods: ["LQR/LQG", "system identification"]
+  stage: production
+  summary: "Minimum variance controllers built from maximum likelihood identified process and disturbance models regulated a Billerud paper machine, reporting results from on-line computer control."
+
+- title: "Performance Assessments of an Advanced Control System in an Iron Ore Industrial Grinding Circuit"
+  url: https://doi.org/10.3390/min15111172
+  org: ["Usiminas", "ANDRITZ", "University of São Paulo"]
+  year: 2025
+  type: paper
+  topic: "Metals, mining & cement"
+  methods: ["MPC", "fuzzy logic"]
+  stage: production
+  summary: "ANDRITZ BrainWave MPC with fuzzy supervisory logic on an Usiminas iron ore ball-mill circuit, assessed in a 67-day on/off test, raised throughput about 5% and cut energy use."
+
+- title: "Multi-Mode Model Predictive Control Approach for Steel Billets Reheating Furnaces"
+  url: https://doi.org/10.3390/s23083966
+  org: ["Marche Polytechnic University", "Alperia Green Future"]
+  year: 2023
+  type: paper
+  topic: "Metals, mining & cement"
+  methods: ["MPC", "state estimation"]
+  stage: production
+  summary: "A multi-mode MPC with a billet-tracking virtual sensor runs steel reheating furnaces through production, shutdowns, and restarts, installed at several European steel plants with energy savings."
+
+- title: "Model predictive control of a rotary cement kiln"
+  url: https://doi.org/10.1016/j.conengprac.2010.08.004
+  org: ["ABB", "Holcim"]
+  year: 2011
+  type: paper
+  topic: "Metals, mining & cement"
+  methods: ["MPC"]
+  stage: production
+  summary: "ABB's Expert Optimizer MPC was commissioned on a Holcim cement kiln in Switzerland, running above 95% uptime and sharply reducing feed rate and burning-zone temperature variance."
+
+- title: "Thinking ahead: Ensuring stable and more beneficial operation of a cement plant with Expert Optimizer"
+  url: https://library.e.abb.com/public/76155f7ed7ce01ea8325734b0040c552/18-21%203M772_ENG72dpi.pdf
+  org: ["ABB", "Holcim"]
+  year: 2007
+  type: report
+  topic: "Metals, mining & cement"
+  methods: ["MPC"]
+  stage: production
+  summary: "ABB applied receding-horizon MPC in Expert Optimizer to hold precalciner temperature with primary fuels at Holcim's Lägerdorf cement plant, outperforming manual operator control."
+
+- title: "Industrial applications of predictive functional control to metallurgical industries"
+  url: https://doi.org/10.1109/CCA.1995.555880
+  org: ["ADERSA"]
+  year: 1995
+  type: paper
+  topic: "Metals, mining & cement"
+  methods: ["MPC"]
+  stage: production
+  summary: "ADERSA reports industrial applications of predictive functional control in metallurgical plants, covering how PFC is implemented and the results obtained by users."
+
+- title: "Report on Actual Benefits Arising From The Application of Expert Control Systems in Industrial Semi-Autogenous Grinding Circuits"
+  url: https://doi.org/10.1016/S1474-6670(17)53088-8
+  org: ["Control International"]
+  year: 1989
+  type: paper
+  topic: "Metals, mining & cement"
+  methods: ["expert systems"]
+  stage: production
+  summary: "Control International documents realized benefits from rule-based expert control systems running on industrial semi-autogenous grinding mill circuits."
+
+- title: "Implementation of a fully integrated continuous manufacturing line for direct compression and coating at a commercial pharmaceutical facility – Part 1: Operational considerations and control strategy"
+  url: https://doi.org/10.1016/j.ijpharm.2023.122820
+  org: ["Merck", "MSD"]
+  year: 2023
+  type: paper
+  topic: "Pharmaceuticals"
+  methods: ["state estimation"]
+  stage: production
+  summary: "Merck/MSD built a continuous direct-compression and coating line in a commercial plant, controlled through real-time monitoring, residence-time models, automated NIR testing, and automatic material diversion."
+
+- title: "The Application of an Automated Control Strategy for an Integrated Continuous Pharmaceutical Pilot Plant"
+  url: https://doi.org/10.1021/op500104d
+  org: ["MIT"]
+  year: 2015
+  type: paper
+  topic: "Pharmaceuticals"
+  methods: ["PID"]
+  stage: field
+  summary: "MIT ran an automated control strategy on an end-to-end continuous pharmaceutical pilot plant, holding critical material attributes of the API slurry near setpoints during sustained operation."
+
+- title: "Control of Wafer Scanners: Methods and Developments"
+  url: https://doi.org/10.23919/ACC45564.2020.9147464
+  org: ["ASML", "Cymer"]
+  year: 2020
+  type: paper
+  topic: "Semiconductors & precision motion"
+  methods: ["system identification", "state estimation", "robust control"]
+  stage: production
+  summary: "ASML and Cymer engineers review control in production wafer scanners, from light-source and reticle-stage control to vibration isolation, thermal modeling, and deformation control."
+
+- title: "Enhancing Flatbed Printer Accuracy and Throughput: Optimal Rational Feedforward Controller Tuning Via Iterative Learning Control"
+  url: https://doi.org/10.1109/TIE.2016.2613498
+  org: ["Eindhoven University of Technology", "Océ"]
+  year: 2017
+  type: paper
+  topic: "Semiconductors & precision motion"
+  methods: ["iterative learning control", "feedforward"]
+  stage: field
+  summary: "TU/e and Océ tune rational feedforward controllers through iterative learning control, improving accuracy and throughput in experiments on an industrial flatbed inkjet printer."
+
+- title: "HVM capabilities of CPE run-to-run overlay control"
+  url: https://doi.org/10.1117/12.2190852
+  org: ["GlobalFoundries", "KLA"]
+  year: 2015
+  type: paper
+  topic: "Semiconductors & precision motion"
+  methods: ["run-to-run control"]
+  stage: production
+  summary: "GlobalFoundries and KLA run per-exposure run-to-run overlay correction in high-volume 28nm and 14nm manufacturing, cutting mean plus 3-sigma overlay by up to 20% on critical layers."
+
+- title: "Position Control in Lithographic Equipment"
+  url: https://doi.org/10.1109/MCS.2011.941882
+  org: ["ASML"]
+  year: 2011
+  type: paper
+  topic: "Semiconductors & precision motion"
+  methods: ["PID", "feedforward"]
+  stage: production
+  summary: "ASML engineer explains how wafer and reticle stages in lithography scanners reach nanometer positioning, decoupling six-degree-of-freedom actuation so SISO feedback and feedforward controllers suffice."
+
+- title: "A brief history of disk drive control"
+  url: https://doi.org/10.1109/MCS.2002.1003997
+  org: ["Agilent", "Stanford"]
+  year: 2002
+  type: paper
+  topic: "Semiconductors & precision motion"
+  methods: ["state estimation", "PID"]
+  stage: production
+  summary: "History of hard disk drive servo control co-written by an industry engineer, tracing how seek and track-following loops in shipped drives evolved alongside heads, actuators, and media."
+
+- title: "Automatic control in microelectronics manufacturing: Practices, challenges, and possibilities"
+  url: https://doi.org/10.1016/S0005-1098(00)00084-4
+  org: ["UT Austin", "Texas Instruments", "AMD", "Motorola", "Hyundai"]
+  year: 2000
+  type: paper
+  topic: "Semiconductors & precision motion"
+  methods: ["run-to-run control"]
+  stage: production
+  summary: "Engineers from Texas Instruments, AMD, Motorola and Hyundai with UT Austin survey fab control practice, including run-to-run control of lithography, etch, deposition, and CMP in production."
+
+- title: "Run by run control of chemical-mechanical polishing"
+  url: https://doi.org/10.1109/3476.558560
+  org: ["MIT", "University of Michigan", "SEMATECH"]
+  year: 1996
+  type: paper
+  topic: "Semiconductors & precision motion"
+  methods: ["run-to-run control"]
+  stage: field
+  summary: "An EWMA run-by-run controller with a multivariate recipe generator compensated removal-rate drift in chemical-mechanical polishing, validated on more than one CMP tool over several months."
+
+- title: "Control Requirements for Automatic Managed Pressure Drilling System"
+  url: https://doi.org/10.2118/119442-PA
+  org: ["Statoil"]
+  year: 2010
+  type: paper
+  topic: "Oil & gas production"
+  methods: ["PID", "state estimation"]
+  stage: field
+  summary: "Statoil sets out requirements for automatic downhole pressure control by topside choking in managed pressure drilling, drawing on its 2007 automatic MPD operation on Kvitebjørn."
+
+- title: "Improving Oil Production Using Smart Fields Technology in the SF30 Satellite Oil Development Offshore Malaysia"
+  url: https://doi.org/10.4043/16162-MS
+  org: ["Shell", "WellDynamics"]
+  year: 2004
+  type: paper
+  topic: "Oil & gas production"
+  methods: ["real-time optimization", "state estimation"]
+  stage: operations
+  summary: "Shell's SF30 offshore Malaysia field combined smart well completions with intelligent gas-lift optimization and real-time flow estimation, producing since 2001 with estimated 10% production gains."

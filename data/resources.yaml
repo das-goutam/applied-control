@@ -1,0 +1,411 @@
+# Resources. Schema and rules: see CONTRIBUTING.md.
+
+- title: "Deep Reinforcement Learning for Robotics: A Survey of Real-World Successes"
+  url: https://arxiv.org/abs/2408.03539
+  org: ["UT Austin", "University of Virginia", "Sony AI"]
+  year: 2024
+  type: paper
+  topic: "Industry surveys & impact reports"
+  methods: ["reinforcement learning", "learning-based control"]
+  stage: operations
+  summary: "Reviews deep RL results achieved on physical robots across core skills and analyzes which factors made those real-world deployments work and what gaps remain."
+
+- title: "Control for Societal-scale Challenges: Road Map 2030"
+  url: https://ieeecss.org/control-societal-scale-challenges-road-map-2030
+  org: ["IEEE CSS", "MIT", "KTH", "University of Pennsylvania"]
+  year: 2023
+  type: report
+  topic: "Industry surveys & impact reports"
+  methods: ["general", "learning-based control"]
+  stage: operations
+  summary: "IEEE CSS roadmap on how control can address climate, healthcare, infrastructure and resilience needs, with chapters on validation, translation to practice, ethics and education."
+
+- title: "Challenges of real-world reinforcement learning: definitions, benchmarks and analysis"
+  url: https://doi.org/10.1007/s10994-021-05961-4
+  org: ["Google", "Google DeepMind"]
+  year: 2021
+  type: paper
+  topic: "Industry surveys & impact reports"
+  methods: ["reinforcement learning"]
+  stage: operations
+  summary: "Google researchers define the obstacles that keep reinforcement learning off physical systems, such as safety constraints, delays and scarce data, and release benchmarks targeting them."
+
+- title: "Industry engagement with control research: Perspective and messages"
+  url: https://doi.org/10.1016/j.arcontrol.2020.03.002
+  org: ["University of Minnesota", "MERL", "Politecnico di Milano", "IFAC"]
+  year: 2020
+  type: paper
+  topic: "Industry surveys & impact reports"
+  methods: ["general", "PID", "MPC"]
+  stage: operations
+  summary: "IFAC Industry Committee members from firms such as ASML, Airbus and Medtronic report a survey of control technology impact and give ten messages for researchers."
+
+- title: "Learning-Based Model Predictive Control: Toward Safe Learning in Control"
+  url: https://doi.org/10.1146/annurev-control-090419-075625
+  org: ["ETH Zurich"]
+  year: 2020
+  type: paper
+  topic: "Industry surveys & impact reports"
+  methods: ["MPC", "learning-based control"]
+  stage: operations
+  summary: "ETH Zurich review of MPC schemes that learn dynamics, costs or safety certificates from data, emphasizing how safety can be retained when applied to real systems."
+
+- title: "Real-time optimization and model predictive control for aerospace and automotive applications"
+  url: https://doi.org/10.23919/ACC.2018.8431585
+  org: ["MERL", "University of Michigan"]
+  year: 2018
+  type: paper
+  topic: "Industry surveys & impact reports"
+  methods: ["MPC", "convex optimization", "trajectory optimization"]
+  stage: operations
+  summary: "ACC tutorial by MERL and Michigan authors reviewing how real-time optimization and MPC have been developed and applied for automotive and aerospace systems."
+
+- title: "A Survey on Industry Impact and Challenges Thereof"
+  url: https://doi.org/10.1109/MCS.2016.2621438
+  org: ["University of Minnesota", "IFAC"]
+  year: 2017
+  type: paper
+  topic: "Industry surveys & impact reports"
+  methods: ["general"]
+  stage: operations
+  summary: "IEEE Control Systems Magazine column introducing IFAC's pilot Industry Committee and its effort to gauge the industrial impact of control technologies and the obstacles to it."
+
+- title: "Embedded Optimization Methods for Industrial Automatic Control"
+  url: https://doi.org/10.1016/j.ifacol.2017.08.1946
+  org: ["ABB", "University of Freiburg", "ETH Zurich", "embotech", "EPFL"]
+  year: 2017
+  type: paper
+  topic: "Industry surveys & impact reports"
+  methods: ["MPC", "convex optimization", "nonlinear MPC"]
+  stage: operations
+  summary: "ABB, embotech and academic authors survey embedded solvers for real-time MPC and estimation, citing industrial uses in engines, power electronics, cranes and LHC cryogenics."
+
+- title: "The current state of control loop performance monitoring – A survey of application in industry"
+  url: https://doi.org/10.1016/j.jprocont.2015.11.002
+  org: ["ABB", "Zhejiang University", "TH Köln", "Imperial College London"]
+  year: 2016
+  type: paper
+  topic: "Industry surveys & impact reports"
+  methods: ["PID", "general"]
+  stage: operations
+  summary: "ABB-led survey of how control-loop performance monitoring is applied in industry, which techniques are in use and which problems remain open."
+
+- title: "Model Predictive Control in Industry: Challenges and Opportunities"
+  url: https://doi.org/10.1016/j.ifacol.2015.09.022
+  org: ["Honeywell", "Saudi Aramco", "University of British Columbia"]
+  year: 2015
+  type: paper
+  topic: "Industry surveys & impact reports"
+  methods: ["MPC", "system identification"]
+  stage: operations
+  summary: "Honeywell and Saudi Aramco engineers, with a UBC coauthor, outline the challenges industrial MPC faces in practice and the opportunities they open for research."
+
+- title: "The Impact of Control Technology, 2nd Edition"
+  url: https://www.ieeecss.org/impact-control-technology-2nd-edition
+  org: ["IEEE CSS"]
+  year: 2014
+  type: report
+  topic: "Industry surveys & impact reports"
+  methods: ["general"]
+  stage: operations
+  summary: "Updated IEEE CSS collection of 30 industrial success stories, such as PID auto-tuners, mobile phones, UAV autopilots and Formula One, plus 38 research challenge flyers."
+
+- title: "The development of Model Predictive Control in automotive industry: A survey"
+  url: https://doi.org/10.1109/CCA.2012.6402735
+  org: ["Ford", "MERL", "University of Michigan"]
+  year: 2012
+  type: paper
+  topic: "Industry surveys & impact reports"
+  methods: ["MPC"]
+  stage: operations
+  summary: "Ford researchers and collaborators survey how MPC has been developed and applied for automotive systems such as powertrain and vehicle dynamics control."
+
+- title: "The Impact of Control Technology: Overview, Success Stories, and Research Challenges"
+  url: https://www.ieeecss.org/impact-control-technology-1st-edition
+  org: ["IEEE CSS"]
+  year: 2011
+  type: report
+  topic: "Industry surveys & impact reports"
+  methods: ["general"]
+  stage: operations
+  summary: "IEEE CSS report gathering short success stories of deployed control and open research challenges across aerospace, automotive, process, energy and other industries."
+
+- title: "A survey of industrial model predictive control technology"
+  url: https://doi.org/10.1016/S0967-0661(02)00186-7
+  org: ["UT Austin", "AspenTech"]
+  year: 2003
+  type: paper
+  topic: "Industry surveys & impact reports"
+  methods: ["MPC", "nonlinear MPC", "system identification"]
+  stage: operations
+  summary: "Landmark review of commercial MPC vendor products and their application counts by industry, comparing how linear and nonlinear packages handle modeling, identification and optimization."
+
+- title: "Increasing Customer Value of Industrial Control Performance Monitoring—Honeywell's Experience"
+  url: https://skoge.folk.ntnu.no/prost/proceedings/cpc6-jan2002/desborough.pdf
+  org: ["Honeywell"]
+  year: 2002
+  type: paper
+  topic: "Industry surveys & impact reports"
+  methods: ["PID"]
+  stage: operations
+  summary: "Honeywell field data show about 97% of regulatory loops in refining, chemicals and pulp and paper use PID, and only about a third perform acceptably."
+
+- title: "The future of PID control"
+  url: https://doi.org/10.1016/S0967-0661(01)00062-4
+  org: ["Lund University"]
+  year: 2001
+  type: paper
+  topic: "Industry surveys & impact reports"
+  methods: ["PID"]
+  stage: operations
+  summary: "Åström and Hägglund examine why PID still dominates industrial loops and how tuning, auto-tuning, implementation details and design tools should evolve."
+
+- title: "ros2_control"
+  url: https://control.ros.org/
+  org: ["ros-controls", "OSRA"]
+  year: 2020
+  type: code
+  topic: "Software with documented deployments"
+  methods: ["PID", "general"]
+  stage: production
+  summary: "Real-time ROS 2 control framework with manufacturer-supported drivers from Universal Robots, Fanuc, Franka, Kinova and Denso for running controllers on industrial arms."
+
+- title: "ROSCO: Reference Open-Source Controller"
+  url: https://github.com/NREL/ROSCO
+  org: ["NREL"]
+  year: 2020
+  type: code
+  topic: "Software with documented deployments"
+  methods: ["PID", "gain scheduling"]
+  stage: production
+  summary: "NREL's industry-representative wind turbine controller, the baseline for IEA 3.4, 10 and 15 MW reference turbines and tested in 1:70-scale floating-turbine basin experiments."
+
+- title: "acados"
+  url: https://github.com/acados/acados
+  org: ["University of Freiburg"]
+  year: 2019
+  type: code
+  topic: "Software with documented deployments"
+  methods: ["nonlinear MPC", "state estimation", "optimal control"]
+  stage: production
+  summary: "Embedded C solvers for nonlinear MPC and moving horizon estimation, used in comma.ai's openpilot driver assistance, wind-turbine control studies and real quadrotor flight."
+
+- title: "OSQP"
+  url: https://osqp.org/
+  org: ["University of Oxford", "Stanford", "Princeton University", "IMT Lucca", "ETH Zurich"]
+  year: 2017
+  type: code
+  topic: "Software with documented deployments"
+  methods: ["convex optimization", "MPC"]
+  stage: production
+  summary: "ADMM-based QP solver that can generate library-free embedded C code for MPC, listing Toyota, Siemens, Aptiv and Lyft among its users."
+
+- title: "openpilot"
+  url: https://github.com/commaai/openpilot
+  org: ["comma.ai"]
+  year: 2016
+  type: code
+  topic: "Software with documented deployments"
+  methods: ["MPC", "learning-based control"]
+  stage: production
+  summary: "comma.ai's open-source driver assistance system for 300+ supported cars. Its planners historically ran acados-solved MPC, and later releases replaced lateral and experimental longitudinal MPC with learned end-to-end policies."
+
+- title: "FORCESPRO"
+  url: https://embotech.ai/forcespro
+  org: ["embotech"]
+  year: 2014
+  type: code
+  topic: "Software with documented deployments"
+  methods: ["MPC", "nonlinear MPC", "convex optimization"]
+  stage: production
+  summary: "Commercial generator of embedded MPC solvers from embotech, aimed at automotive planning, industrial automation and aerospace, and usable through MathWorks' MPC Toolbox."
+
+- title: "CVXGEN: a code generator for embedded convex optimization"
+  url: https://doi.org/10.1007/s11081-011-9176-9
+  org: ["Stanford"]
+  year: 2012
+  type: paper
+  topic: "Software with documented deployments"
+  methods: ["convex optimization", "MPC", "trajectory optimization"]
+  stage: production
+  summary: "Describes CVXGEN, which emits fast custom C solvers for small QPs; SpaceX uses it to generate onboard convex optimization code for Falcon 9 landing."
+
+- title: "PX4 Autopilot"
+  url: https://github.com/PX4/PX4-Autopilot
+  org: ["Dronecode Foundation"]
+  year: 2012
+  type: code
+  topic: "Software with documented deployments"
+  methods: ["PID", "Kalman filtering", "state estimation"]
+  stage: production
+  summary: "BSD-licensed flight stack under the Linux Foundation's Dronecode project, flying commercial multirotor, fixed-wing, VTOL, cargo and survey vehicles plus rovers and submersibles."
+
+- title: "CasADi"
+  url: https://web.casadi.org/
+  org: ["KU Leuven"]
+  year: 2011
+  type: code
+  topic: "Software with documented deployments"
+  methods: ["optimal control", "nonlinear MPC", "trajectory optimization"]
+  stage: production
+  summary: "Algorithmic differentiation and optimal control framework used by acados for model specification and as the backend of tools such as JModelica.org and Deltares' RTC-Tools."
+
+- title: "ArduPilot"
+  url: https://github.com/ArduPilot/ardupilot
+  org: ["ArduPilot Project"]
+  year: 2009
+  type: code
+  topic: "Software with documented deployments"
+  methods: ["PID", "Kalman filtering"]
+  stage: production
+  summary: "GPL autopilot for planes, copters, helicopters, rovers, boats and subs, installed in over a million vehicles, used by companies, universities and agencies like NASA, and run on the 3DR Solo."
+
+- title: "qpOASES"
+  url: https://github.com/coin-or/qpOASES
+  org: ["Heidelberg University", "ABB"]
+  year: 2007
+  type: code
+  topic: "Software with documented deployments"
+  methods: ["MPC", "convex optimization"]
+  stage: production
+  summary: "Online active-set QP solver designed for MPC, code-generated onto an industrial PLC in NTNU and ABB hardware-in-the-loop tests using Statoil SEPTIC controller configurations."
+
+- title: "Applying Spot to Real World Applications"
+  url: https://www.youtube.com/watch?v=_V_ApampCDQ
+  org: ["Boston Dynamics"]
+  year: 2021
+  type: talk
+  topic: "Talks & videos"
+  methods: ["general"]
+  stage: operations
+  summary: "Spot engineering lead Marco da Silva describes how Boston Dynamics turned its quadruped into an industrial sensing platform via an extensible API, autonomy features and payload support."
+
+- title: "Recent Progress on Atlas, the World's Most Dynamic Humanoid Robot"
+  url: https://www.youtube.com/watch?v=EGABAx52GKI
+  org: ["Boston Dynamics"]
+  year: 2020
+  type: talk
+  topic: "Talks & videos"
+  methods: ["trajectory optimization", "optimal control"]
+  stage: operations
+  summary: "Boston Dynamics' Scott Kuindersma explains how optimization lets the Atlas team rapidly create dynamic humanoid behaviors, including perception-driven parkour, in a Robotics Today seminar."
+
+- title: "Control Systems in Practice"
+  url: https://www.mathworks.com/videos/series/control-systems-in-practice.html
+  org: ["MathWorks"]
+  year: 2018
+  type: video
+  topic: "Talks & videos"
+  methods: ["gain scheduling", "feedforward", "PID"]
+  stage: operations
+  summary: "Brian Douglas's MathWorks video series on the practical side of control engineering, including the job beyond tuning, gain scheduling, feedforward, time delays and coding transfer functions."
+
+- title: "Understanding Model Predictive Control"
+  url: https://www.mathworks.com/videos/series/understanding-model-predictive-control.html
+  org: ["MathWorks"]
+  year: 2018
+  type: video
+  topic: "Talks & videos"
+  methods: ["MPC", "nonlinear MPC"]
+  stage: operations
+  summary: "MathWorks series introducing MPC design parameters and variants, then designing nonlinear MPC with FORCESPRO and running it on Speedgoat real-time hardware."
+
+- title: "Understanding PID Control"
+  url: https://www.mathworks.com/videos/series/understanding-pid-control.html
+  org: ["MathWorks"]
+  year: 2018
+  type: video
+  topic: "Talks & videos"
+  methods: ["PID"]
+  stage: operations
+  summary: "Seven short MathWorks videos by Brian Douglas covering implementation issues such as integrator windup, derivative filtering, plant modeling and manual versus automatic PID tuning."
+
+- title: "Meet Spot, the robot dog that can run, hop and open doors"
+  url: https://www.ted.com/talks/marc_raibert_meet_spot_the_robot_dog_that_can_run_hop_and_open_doors
+  org: ["Boston Dynamics"]
+  year: 2017
+  type: talk
+  topic: "Talks & videos"
+  methods: ["general"]
+  stage: operations
+  summary: "Boston Dynamics founder Marc Raibert presents the company's dynamically balanced legged machines and demonstrates SpotMini mapping, climbing stairs and manipulating objects live on stage."
+
+- title: "Feedback Systems: An Introduction for Scientists and Engineers"
+  url: https://fbswiki.org/wiki/index.php/Feedback_Systems:_An_Introduction_for_Scientists_and_Engineers
+  org: ["Lund University", "Caltech"]
+  year: 2021
+  type: book
+  topic: "Books & long-form guides"
+  methods: ["PID", "LQR/LQG", "robust control", "general"]
+  stage: operations
+  summary: "Åström and Murray's freely downloadable second edition covering modeling, feedback principles, PID, state feedback, frequency-domain design and robustness, with examples across engineering domains."
+
+- title: "Data-Driven Science and Engineering: Machine Learning, Dynamical Systems, and Control"
+  url: https://databookuw.com/
+  org: ["University of Washington"]
+  year: 2019
+  type: book
+  topic: "Books & long-form guides"
+  methods: ["system identification", "learning-based control", "reinforcement learning"]
+  stage: operations
+  summary: "Brunton and Kutz connect machine learning with system identification and data-driven control, with downloadable MATLAB and Python code and data on the companion site."
+
+- title: "Model Predictive Control: Theory, Computation, and Design"
+  url: https://sites.engineering.ucsb.edu/~jbraw/mpc/
+  org: ["UCSB", "Imperial College London", "University of Freiburg"]
+  year: 2017
+  type: book
+  topic: "Books & long-form guides"
+  methods: ["MPC", "state estimation", "nonlinear MPC"]
+  stage: operations
+  summary: "Rawlings, Mayne and Diehl's second edition, available as free PDF, covering MPC stability theory, moving horizon estimation and the numerical optimization behind practical implementations."
+
+- title: "Control Performance Management in Industrial Automation: Assessment, Diagnosis and Improvement of Control Loop Performance"
+  url: https://link.springer.com/book/10.1007/978-1-4471-4546-2
+  org: ["TH Köln"]
+  year: 2013
+  type: book
+  topic: "Books & long-form guides"
+  methods: ["PID", "general"]
+  stage: operations
+  summary: "Monograph on assessing loop performance, diagnosing oscillations, nonlinearities and actuator faults, and retuning controllers, illustrated with case studies from chemicals, mining and paper mills."
+
+- title: "Feedback Control for Computer Systems"
+  url: https://www.oreilly.com/library/view/feedback-control-for/9781449362638/
+  org: ["Philipp K. Janert"]
+  year: 2013
+  type: book
+  topic: "Books & long-form guides"
+  methods: ["PID"]
+  stage: operations
+  summary: "Hands-on guide by Philipp Janert applying feedback loops to enterprise software, using simulations of data-center problems such as adding servers automatically during traffic spikes."
+
+- title: "PID Control in the Third Millennium: Lessons Learned and New Approaches"
+  url: https://link.springer.com/book/10.1007/978-1-4471-2425-2
+  org: ["Universitat Autònoma de Barcelona", "University of Brescia"]
+  year: 2012
+  type: book
+  topic: "Books & long-form guides"
+  methods: ["PID"]
+  stage: operations
+  summary: "Edited Springer volume reviewing PID tuning, implementation and data-driven design, including a chapter by practitioner Greg McMillan on industrial PID applications."
+
+- title: "Feedback Control of Computing Systems"
+  url: https://doi.org/10.1002/047166880X
+  org: ["IBM", "University of Michigan"]
+  year: 2004
+  type: book
+  topic: "Books & long-form guides"
+  methods: ["PID", "system identification", "LQR/LQG"]
+  stage: operations
+  summary: "A textbook from IBM researchers and Dawn Tilbury on modeling computing systems and designing feedback controllers for them, from system identification through PID and state-space design."
+
+- title: "Simple analytic rules for model reduction and PID controller tuning"
+  url: https://doi.org/10.1016/S0959-1524(02)00062-8
+  org: ["NTNU"]
+  year: 2003
+  type: paper
+  topic: "Books & long-form guides"
+  methods: ["PID"]
+  stage: operations
+  summary: "Skogestad's SIMC method for reducing plant models and tuning PI and PID loops in a single step, a widely used reference for process-industry tuning."

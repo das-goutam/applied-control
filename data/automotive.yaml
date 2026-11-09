@@ -1,0 +1,411 @@
+# Automotive, Rail & Maritime. Schema and rules: see CONTRIBUTING.md.
+
+- title: "Model Predictive Control of Turbocharged Gasoline Engines for Mass Production"
+  url: https://doi.org/10.4271/2018-01-0875
+  org: ["GM", "ODYS"]
+  year: 2018
+  type: paper
+  topic: "Powertrain & energy management"
+  methods: ["MPC", "gain scheduling", "Kalman filtering", "system identification"]
+  stage: production
+  summary: "Gain-scheduled linear MPC with Kalman filters coordinates throttle, wastegate and cam phasers to track torque in turbocharged gasoline engines, validated in GM production ECUs for 2018 production."
+
+- title: "Supervisory Model Predictive Control of a Powertrain with a Continuously Variable Transmission"
+  url: https://doi.org/10.4271/2018-01-0860
+  org: ["GM", "ODYS"]
+  year: 2018
+  type: paper
+  topic: "Powertrain & energy management"
+  methods: ["MPC", "gain scheduling", "Kalman filtering"]
+  stage: production
+  summary: "Supervisory gain-scheduled MPC jointly commands CVT ratio and engine torque to deliver driver-requested axle torque efficiently, identified from vehicle data and slated for GM production from 2018."
+
+- title: "Automated Manual Transmissions"
+  url: https://ieeecss.org/sites/ieeecss/files/2019-06/IoCT2-SS-Iannelli-1.pdf
+  org: ["University of Sannio", "Fiat", "BMW", "Volkswagen"]
+  year: 2014
+  type: report
+  topic: "Powertrain & energy management"
+  methods: ["PID", "feedforward", "gain scheduling"]
+  stage: production
+  summary: "Summarizes clutch-engagement control in production automated manual and dual-clutch transmissions (Fiat Selespeed, BMW SMG, VW DSG), which rely on gain-scheduled PID loops with feedforward."
+
+- title: "Power Smoothing Energy Management and Its Application to a Series Hybrid Powertrain"
+  url: https://doi.org/10.1109/TCST.2012.2218656
+  org: ["Ford", "University of Michigan"]
+  year: 2013
+  type: paper
+  topic: "Powertrain & energy management"
+  methods: ["MPC"]
+  stage: field
+  summary: "Ford's series-hybrid energy management uses MPC to let the battery absorb engine power transients within charge limits, integrated into powertrain software and tested on a vehicle over UDDS."
+
+- title: "Battery Control Technology of Li-ion Battery System for HEV"
+  url: https://global.honda/en/technical-review/PDF/024-1/024-1_72e.pdf
+  org: ["Honda"]
+  year: 2012
+  type: paper
+  topic: "Powertrain & energy management"
+  methods: ["state estimation", "adaptive control"]
+  stage: production
+  summary: "Honda's battery ECU for the lithium-ion Civic Hybrid estimates internal resistance, open-circuit voltage, SOC and capacity online, raising operating SOC only as the pack ages, and balances individual cells."
+
+- title: "Model Predictive Idle Speed Control: Design, Analysis, and Experimental Evaluation"
+  url: https://doi.org/10.1109/TCST.2011.2112361
+  org: ["Ford", "University of Michigan", "University of Trento"]
+  year: 2012
+  type: paper
+  topic: "Powertrain & energy management"
+  methods: ["MPC"]
+  stage: field
+  summary: "Ford engineers coordinated electronic throttle and spark timing with constrained MPC to hold engine idle speed, fitting production ECU limits and beating the baseline in vehicle tests."
+
+- title: "Model Based Air-path Management Control for Clean Diesel Engine"
+  url: https://global.honda/en/technical-review/papers/10002345/
+  org: ["Honda", "Keio University"]
+  year: 2009
+  type: paper
+  topic: "Powertrain & energy management"
+  methods: ["MPC", "state estimation"]
+  stage: field
+  summary: "Honda used MPC with a disturbance observer to jointly regulate diesel air mass flow and intake pressure through throttle and EGR valves, verified in on-vehicle tests."
+
+- title: "Development of New-Generation Hybrid System THS II - Drastic Improvement of Power Performance and Fuel Economy"
+  url: https://doi.org/10.4271/2004-01-0064
+  org: ["Toyota"]
+  year: 2004
+  type: paper
+  topic: "Powertrain & energy management"
+  methods: ["optimal control"]
+  stage: production
+  summary: "Toyota engineers describe THS II, the power-split hybrid control system launched on the 2003 Prius, which coordinates engine and motor power to raise performance and fuel economy."
+
+- title: "Super Ultra Low Emission System for the Accord SULEV"
+  url: https://global.honda/en/technical-review/PDF/012-2/012-2_37e.pdf
+  org: ["Honda"]
+  year: 2000
+  type: paper
+  topic: "Powertrain & energy management"
+  methods: ["sliding mode", "adaptive control", "system identification"]
+  stage: production
+  summary: "Honda's Accord SULEV, the first SULEV-certified car on sale in the US, regulated air-fuel ratio with an online catalyst identifier, predictor and sliding mode controller on post-catalyst oxygen feedback."
+
+- title: "Development of G-Vectoring Control Plus"
+  url: https://www.mazda.com/globalassets/ja/assets/innovation/technology/gihou/2019/files/2019_no038.pdf
+  org: ["Mazda"]
+  year: 2019
+  type: paper
+  topic: "Vehicle dynamics & chassis"
+  methods: ["feedforward"]
+  stage: production
+  summary: "Mazda extends its production G-Vectoring Control, which trims engine torque from steering-derived lateral jerk at turn-in, with brake-based yaw moment on corner exit, launched on the 2018 CX-5."
+
+- title: "Automotive Engine-Based Traction Control"
+  url: https://ieeecss.org/sites/ieeecss/files/2019-06/IoCT2-SS-Hrovat-1.pdf
+  org: ["Ford"]
+  year: 2014
+  type: report
+  topic: "Vehicle dynamics & chassis"
+  methods: ["LQR/LQG", "PID", "gain scheduling"]
+  stage: production
+  summary: "Ford's engine-only traction control regulates driven-wheel slip with a gain-scheduled PI-plus-lead loop derived from LQ design, shipping from 2006 on Fusion and F-150 models."
+
+- title: "Das vorausschauende aktive Fahrwerk der neuen S-Klasse"
+  url: https://trid.trb.org/View/1359969
+  org: ["Daimler"]
+  year: 2013
+  type: paper
+  topic: "Vehicle dynamics & chassis"
+  methods: ["feedforward", "feedback control"]
+  stage: production
+  summary: "Daimler engineers present Magic Body Control on the 2013 S-Class, where a stereo camera measures the road ahead so Active Body Control actuators pre-compensate body motion over bumps."
+
+- title: "Development of Electric Power Steering System for ATV"
+  url: https://global.honda/en/technical-review/PDF/019-2/19-2_44e.pdf
+  org: ["Honda"]
+  year: 2007
+  type: paper
+  topic: "Vehicle dynamics & chassis"
+  methods: ["gain scheduling", "feedforward"]
+  stage: production
+  summary: "Honda's EPS for the production 2007 FourTrax Foreman ATV combines torque-sensor assist, motor-speed damping, inertia compensation, thermal current limiting and assist gains scheduled on speed and drive mode."
+
+- title: "Predictive Active Steering Control for Autonomous Vehicle Systems"
+  url: https://doi.org/10.1109/TCST.2007.894653
+  org: ["Ford", "University of Sannio"]
+  year: 2007
+  type: paper
+  topic: "Vehicle dynamics & chassis"
+  methods: ["nonlinear MPC", "MPC"]
+  stage: field
+  summary: "Ford and Sannio researchers used nonlinear and successively linearized MPC to command active front steering for path following, tested on a vehicle on icy roads up to 21 m/s."
+
+- title: "Active Body Control (ABC) The DaimlerChrysler Active Suspension and Damping System"
+  url: https://saemobilus.sae.org/content/2002-21-0054
+  org: ["DaimlerChrysler"]
+  year: 2002
+  type: paper
+  topic: "Vehicle dynamics & chassis"
+  methods: ["feedback control"]
+  stage: production
+  summary: "DaimlerChrysler engineers describe the production hydraulic active suspension tuned for S-Class and SL models, where 13 sensors feed control logic that shifts each wheel's spring base against roll and pitch."
+
+- title: "Bosch ESP Systems: 5 Years of Experience"
+  url: https://doi.org/10.4271/2000-01-1633
+  org: ["Bosch"]
+  year: 2000
+  type: paper
+  topic: "Vehicle dynamics & chassis"
+  methods: ["state estimation"]
+  stage: production
+  summary: "Reviews five years of ESP field use, where estimated vehicle sideslip sets yaw-moment demands realized via individual wheel-slip control and engine intervention to prevent loss of control."
+
+- title: "The development of vehicle stability control at Ford"
+  url: https://doi.org/10.1109/3516.789681
+  org: ["Ford", "Visteon"]
+  year: 1999
+  type: paper
+  topic: "Vehicle dynamics & chassis"
+  methods: ["state estimation", "fault-tolerant control"]
+  stage: production
+  summary: "Ford and Visteon engineers describe practical problems in engineering Ford's yaw stability control, including driver-intent recognition, state and road-bank estimation, target generation, smooth brake actuation and fault detection."
+
+- title: "VDC, The Vehicle Dynamics Control System of Bosch"
+  url: https://doi.org/10.4271/950759
+  org: ["Bosch"]
+  year: 1995
+  type: paper
+  topic: "Vehicle dynamics & chassis"
+  methods: ["state estimation"]
+  stage: production
+  summary: "Bosch's vehicle dynamics control, later sold as ESP, compares driver-intended and measured yaw and lateral motion and corrects deviations via individual wheel brake pressures and engine torque."
+
+- title: "Are Commercially Implemented Adaptive Cruise Control Systems String Stable?"
+  url: https://doi.org/10.1109/TITS.2020.3000682
+  org: ["Vanderbilt University", "UIUC", "University of Arizona", "Rutgers University", "Temple University"]
+  year: 2021
+  type: paper
+  topic: "ADAS & autonomous driving"
+  methods: ["system identification"]
+  stage: production
+  summary: "Over 1,200 miles of car-following tests on seven 2018 production ACC models, identified as delay-differential models, showed every system amplified speed disturbances along a platoon."
+
+- title: "End-to-end lateral planning"
+  url: https://blog.comma.ai/end-to-end-lateral-planning/
+  org: ["comma.ai"]
+  year: 2021
+  type: blog
+  topic: "ADAS & autonomous driving"
+  methods: ["learning-based control"]
+  stage: production
+  summary: "comma.ai shipped a vision-trained policy that outputs 3D trajectories for openpilot's lateral control, trained in warped-video simulation and released to users in openpilot 0.8.3."
+
+- title: "Baidu Apollo Auto-Calibration System: An Industry-Level Data-Driven and Learning-Based Vehicle Longitude Dynamic Calibrating Algorithm"
+  url: https://arxiv.org/abs/1808.10134
+  org: ["Baidu"]
+  year: 2018
+  type: paper
+  topic: "ADAS & autonomous driving"
+  methods: ["learning-based control", "system identification"]
+  stage: field
+  summary: "Baidu builds longitudinal throttle and brake calibration tables from human driving data and refines them online, deployed on 100+ Apollo vehicles across over 2,000 hours of testing."
+
+- title: "Baidu Apollo EM Motion Planner"
+  url: https://arxiv.org/abs/1807.08048
+  org: ["Baidu"]
+  year: 2018
+  type: paper
+  topic: "ADAS & autonomous driving"
+  methods: ["dynamic programming", "convex optimization", "trajectory optimization"]
+  stage: field
+  summary: "Baidu's open-source Apollo planner alternates dynamic-programming and spline-QP optimization of path and speed in a Frenet frame, logging 3,380 hours of closed-loop driving on dozens of vehicles."
+
+- title: "Heavy-Duty Vehicle Platooning for Sustainable Freight Transportation: A Cooperative Method to Enhance Safety and Efficiency"
+  url: https://doi.org/10.1109/MCS.2015.2471046
+  org: ["Scania", "KTH"]
+  year: 2015
+  type: paper
+  topic: "ADAS & autonomous driving"
+  methods: ["distributed control"]
+  stage: field
+  summary: "Three Scania tractor-trailers ran decentralized cooperative adaptive cruise control on Sweden's E20 highway in public traffic, measuring follower fuel savings of roughly 4 to 6.5 percent."
+
+- title: "Cooperative Adaptive Cruise Control in Real Traffic Situations"
+  url: https://doi.org/10.1109/TITS.2013.2278494
+  org: ["UC Berkeley", "Nissan"]
+  year: 2014
+  type: paper
+  topic: "ADAS & autonomous driving"
+  methods: ["feedforward", "distributed control"]
+  stage: field
+  summary: "PATH and Nissan engineers fitted production cars with V2V-based cooperative adaptive cruise control and evaluated gap regulation and string stability in real highway traffic."
+
+- title: "Making Bertha Drive—An Autonomous Journey on a Historic Route"
+  url: https://doi.org/10.1109/MITS.2014.2306552
+  org: ["Daimler", "KIT", "FZI"]
+  year: 2014
+  type: paper
+  topic: "ADAS & autonomous driving"
+  methods: ["trajectory optimization", "state estimation"]
+  stage: field
+  summary: "A Mercedes S-Class using near-production radar and stereo vision drove the 103 km Bertha Benz route autonomously, combining map-based localization with optimization-based urban motion planning."
+
+- title: "Road Grade Estimation for Advanced Driver Assistance Systems"
+  url: https://ieeecss.org/sites/ieeecss/files/2019-06/IoCT2-SS-Sahlholm-1.pdf
+  org: ["Scania", "KTH"]
+  year: 2014
+  type: report
+  topic: "ADAS & autonomous driving"
+  methods: ["Kalman filtering", "state estimation"]
+  stage: production
+  summary: "Scania's production Active Prediction and Eco-roll use mapped road grade to plan truck speed and coasting over hills; the authors propose Kalman-filtered fleet estimates to build those maps."
+
+- title: "Look-ahead control for heavy trucks to minimize trip time and fuel consumption"
+  url: https://doi.org/10.1016/j.conengprac.2008.07.005
+  org: ["Linköping University", "Scania"]
+  year: 2009
+  type: paper
+  topic: "ADAS & autonomous driving"
+  methods: ["dynamic programming", "MPC"]
+  stage: field
+  summary: "Dynamic programming over GPS and a road-slope map produced velocity setpoints for a heavy truck's cruise controller, cutting fuel use in highway trials with a real truck."
+
+- title: "Traffic Control via Connected and Automated Vehicles (CAVs): An Open-Road Field Experiment with 100 CAVs"
+  url: https://doi.org/10.1109/MCS.2024.3498552
+  org: ["CIRCLES Consortium", "UC Berkeley", "Vanderbilt University"]
+  year: 2025
+  type: paper
+  topic: "Traffic & mobility"
+  methods: ["optimal control", "reinforcement learning", "distributed control"]
+  stage: field
+  summary: "A centralized speed planner sent LTE targets to 100 mixed-make vehicles whose onboard controllers overrode stock ACC, testing stop-and-go wave smoothing in rush-hour I-24 traffic near Nashville."
+
+- title: "Dissipation of stop-and-go waves via control of autonomous vehicles: Field experiments"
+  url: https://arxiv.org/abs/1705.01693
+  org: ["UIUC", "Rutgers University", "Temple University", "University of Arizona", "Inria"]
+  year: 2018
+  type: paper
+  topic: "Traffic & mobility"
+  methods: ["PID"]
+  stage: field
+  summary: "In ring-road experiments with over 20 cars, controlling one autonomous vehicle's speed damped spontaneously forming stop-and-go waves, reducing braking events and fuel consumption."
+
+- title: "Smart Urban Signal Networks: Initial Application of the SURTRAC Adaptive Traffic Signal Control System"
+  url: https://ojs.aaai.org/index.php/ICAPS/article/view/13594
+  org: ["Carnegie Mellon University"]
+  year: 2013
+  type: paper
+  topic: "Traffic & mobility"
+  methods: ["dynamic programming", "distributed control"]
+  stage: field
+  summary: "CMU's decentralized SURTRAC schedules each intersection's phases in real time and shares planned outflows with neighbors, cutting travel time about 26% across nine Pittsburgh intersections."
+
+- title: "Heuristic Ramp-Metering Coordination Strategy Implemented at Monash Freeway, Australia"
+  url: https://doi.org/10.3141/2178-02
+  org: ["Technical University of Crete", "VicRoads"]
+  year: 2010
+  type: paper
+  topic: "Traffic & mobility"
+  methods: ["PID", "Kalman filtering", "distributed control"]
+  stage: operations
+  summary: "VicRoads deployed HERO, which coordinates per-ramp ALINEA regulators with queue control and Kalman estimates, on Melbourne's Monash Freeway, raising peak speeds and throughput before wider rollout."
+
+- title: "ALINEA Local Ramp Metering: Summary of Field Results"
+  url: https://doi.org/10.3141/1603-12
+  org: ["Technical University of Crete", "INRETS", "Rijkswaterstaat"]
+  year: 1997
+  type: paper
+  topic: "Traffic & mobility"
+  methods: ["PID"]
+  stage: operations
+  summary: "Summarizes field results of ALINEA, an integral-type local ramp-metering feedback regulator on occupancy, at single and multiple ramps on Paris's Boulevard Périphérique and Amsterdam's A10."
+
+- title: "SCOOT - A Traffic Responsive Method of Coordinating Signals"
+  url: https://www.trl.co.uk/uploads/trl/documents/LR1014.pdf
+  org: ["TRRL"]
+  year: 1981
+  type: report
+  topic: "Traffic & mobility"
+  methods: ["optimal control", "state estimation"]
+  stage: field
+  summary: "TRRL's SCOOT continuously models detector-measured traffic and incrementally adjusts signal splits, offsets and cycles, cutting delay about 12% versus fixed-time plans in Glasgow and Coventry trials."
+
+- title: "The Sydney coordinated adaptive traffic (SCAT) system philosophy and benefits"
+  url: https://doi.org/10.1109/T-VT.1980.23833
+  org: ["NSW Department of Main Roads"]
+  year: 1980
+  type: paper
+  topic: "Traffic & mobility"
+  methods: ["adaptive control"]
+  stage: operations
+  summary: "New South Wales road engineers set out the design and benefits of SCAT, which adapts signal cycle, split and offset to detector data across Sydney's network."
+
+- title: "Trip Optimizer for Railroads"
+  url: https://ieeecss.org/sites/ieeecss/files/2019-06/IoCT2-SS-Eldredge-1.pdf
+  org: ["GE Transportation", "GE Global Research"]
+  year: 2014
+  type: report
+  topic: "Rail"
+  methods: ["optimal control", "Kalman filtering", "adaptive control"]
+  stage: operations
+  summary: "GE's onboard Trip Optimizer plans fuel-minimal locomotive throttle profiles under arrival-time and speed constraints with adaptive parameter estimation, logging over 150 million revenue miles and 4-17% savings."
+
+- title: "Energy-efficient train control"
+  url: https://doi.org/10.1016/0967-0661(94)90198-8
+  org: ["University of South Australia"]
+  year: 1994
+  type: paper
+  topic: "Rail"
+  methods: ["optimal control"]
+  stage: operations
+  summary: "Applies optimal control to find energy-minimizing suburban train driving strategies that keep to the timetable, the research behind the Metromiser driver-advice system used on suburban trains."
+
+- title: "Automatic train operation system based on predictive fuzzy control"
+  url: https://doi.org/10.1109/AIIA.1988.13336
+  org: ["Hitachi"]
+  year: 1988
+  type: paper
+  topic: "Rail"
+  methods: ["fuzzy logic"]
+  stage: operations
+  summary: "Hitachi's ATO encodes skilled drivers' rules in a predictive fuzzy controller for train speed and stopping, matching expert operators in trials on Sendai's municipal subway."
+
+- title: "Autonomous maritime collision avoidance: Field verification of autonomous surface vehicle behavior in challenging scenarios"
+  url: https://doi.org/10.1002/rob.21919
+  org: ["NTNU", "Maritime Robotics"]
+  year: 2020
+  type: paper
+  topic: "Maritime"
+  methods: ["MPC"]
+  stage: field
+  summary: "An MPC collision-avoidance system weighing collision risk against COLREGs compliance steered an autonomous surface vessel through North Sea encounter scenarios in a Deltares-organized verification trial."
+
+- title: "Passive nonlinear observer design for ships using Lyapunov methods: full-scale experiments with a supply vessel"
+  url: https://doi.org/10.1016/S0005-1098(98)00121-6
+  org: ["NTNU"]
+  year: 1999
+  type: paper
+  topic: "Maritime"
+  methods: ["state estimation"]
+  stage: field
+  summary: "A passivity-based nonlinear observer filters wave-frequency motion and estimates ship velocities and bias forces for dynamic positioning, demonstrated in full-scale trials with an offshore supply vessel."
+
+- title: "Rudder Roll Stabilization for Ships"
+  url: https://ris.utwente.nl/ws/files/171144967/Amerongen90rudder.pdf
+  org: ["University of Twente", "Van Rietschoten & Houwens", "TU Delft", "Royal Netherlands Navy"]
+  year: 1990
+  type: paper
+  topic: "Maritime"
+  methods: ["LQR/LQG", "adaptive control"]
+  stage: field
+  summary: "LQG rudder control with automatic gain control damped ship roll in full-scale sea trials, after which the Royal Netherlands Navy chose to fit rudder roll stabilization to ships under construction."
+
+- title: "A Dynamic Positioning System Based on Kalman Filtering and Optimal Control"
+  url: https://doi.org/10.4173/mic.1980.3.1
+  org: ["NTNU", "SINTEF", "Kongsberg"]
+  year: 1980
+  type: paper
+  topic: "Maritime"
+  methods: ["Kalman filtering", "LQR/LQG", "feedforward"]
+  stage: operations
+  summary: "NTNU, SINTEF and Kongsberg present a vessel dynamic positioning system using Kalman-filter estimates of motion and environmental forces with optimal feedback and wind feedforward, supported by operational recordings."

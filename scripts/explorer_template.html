@@ -1,0 +1,327 @@
+<title>Applied Control Explorer</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Search real-world control system deployments by domain, method, stage, and organization.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+/* Layout: an instrument panel. Masthead with the feedback-loop mark, a sticky filter strip, then a
+   ledger of deployments with the year in a fixed left column. */
+:root {
+  --paper: #f1f4f3;
+  --panel: #ffffff;
+  --ink: #12273a;
+  --muted: #566a78;
+  --rule: #d3dcdd;
+  --signal: #c2410c;
+  --signal-soft: #fbe6da;
+  --chip: #e5ebec;
+  --st-production: #2f6b3a;
+  --st-flight: #1f5a96;
+  --st-clinical: #8a2f5b;
+  --st-field: #8a5a12;
+  --st-operations: #4a4f8c;
+  --font-display: "IBM Plex Sans Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --step--1: 0.8125rem;
+  --step-0: 0.9375rem;
+  --step-1: 1.125rem;
+  --step-3: clamp(1.75rem, 1.2rem + 2.4vw, 2.6rem);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0d1620; --panel: #14212e; --ink: #e2e9ee; --muted: #93a5b3; --rule: #263646;
+    --signal: #ff8a50; --signal-soft: #3a2418; --chip: #1c2c3b;
+    --st-production: #7cc48a; --st-flight: #7fb2ea; --st-clinical: #e48bb6; --st-field: #e0b067; --st-operations: #a9adf0;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0d1620; --panel: #14212e; --ink: #e2e9ee; --muted: #93a5b3; --rule: #263646;
+  --signal: #ff8a50; --signal-soft: #3a2418; --chip: #1c2c3b;
+  --st-production: #7cc48a; --st-flight: #7fb2ea; --st-clinical: #e48bb6; --st-field: #e0b067; --st-operations: #a9adf0;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 var(--step-0)/1.55 var(--font-body);
+}
+[hidden] { display: none !important; }
+a { color: inherit; }
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+/* Masthead */
+.masthead { padding-block: 2.25rem 1.5rem; border-bottom: 1px solid var(--rule); }
+.masthead .wrap { display: grid; grid-template-columns: auto 1fr; gap: 1.25rem; align-items: center; }
+.loop { width: 132px; height: auto; color: var(--ink); }
+.loop .sig { stroke: var(--signal); }
+.masthead h1 {
+  margin: 0;
+  font: 600 var(--step-3)/1.05 var(--font-display);
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+.masthead p { margin: 0.4rem 0 0; color: var(--muted); max-width: 62ch; }
+.stats { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; margin-top: 0.75rem; font: 500 var(--step--1)/1.4 var(--font-mono); color: var(--muted); }
+.stats b { color: var(--ink); font-weight: 500; font-variant-numeric: tabular-nums; }
+
+/* Filter strip */
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--panel); }
+.filters {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  background: var(--panel);
+  border-bottom: 1px solid var(--rule);
+  padding-block: 0.75rem;
+}
+.filters .wrap { display: grid; grid-template-columns: 2fr repeat(4, minmax(0, 1fr)); gap: 0.5rem; }
+.field { display: flex; flex-direction: column; gap: 0.2rem; min-width: 0; }
+.field label { font: 500 0.6875rem/1 var(--font-mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+.field input, .field select {
+  width: 100%; min-width: 0;
+  font: inherit; font-size: var(--step--1);
+  color: var(--ink); background: var(--paper);
+  border: 1px solid var(--rule); border-radius: 4px;
+  padding: 0.45rem 0.55rem;
+}
+.field input:focus-visible, .field select:focus-visible, button:focus-visible, a:focus-visible {
+  outline: 2px solid var(--signal); outline-offset: 2px;
+}
+.status { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; padding-block: 1rem 0.5rem; font: 500 var(--step--1)/1.4 var(--font-mono); color: var(--muted); }
+.status b { color: var(--ink); font-weight: 500; font-variant-numeric: tabular-nums; }
+.reset { font: inherit; color: var(--signal); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.sortby { margin-left: auto; display: flex; gap: 0.25rem; }
+.sortby button {
+  font: inherit; color: var(--muted); background: transparent; border: 1px solid transparent; border-radius: 4px; padding: 0.15rem 0.5rem; cursor: pointer;
+}
+.sortby button[aria-pressed="true"] { color: var(--ink); border-color: var(--rule); background: var(--panel); }
+
+/* Ledger */
+.ledger { list-style: none; margin: 0; padding: 0 0 3rem; }
+.row {
+  display: grid; grid-template-columns: 4.25rem 1fr; gap: 1rem;
+  padding-block: 1rem; border-bottom: 1px solid var(--rule);
+}
+.year { font: 500 var(--step-1)/1.3 var(--font-mono); font-variant-numeric: tabular-nums; color: var(--muted); }
+.body { min-width: 0; }
+.where { font: 500 0.6875rem/1.3 var(--font-mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+.title { margin: 0.2rem 0 0.15rem; font: 600 var(--step-1)/1.3 var(--font-body); text-wrap: balance; }
+.title a { text-decoration: none; background-image: linear-gradient(var(--signal), var(--signal)); background-size: 0 1px; background-position: 0 100%; background-repeat: no-repeat; transition: background-size .2s; }
+.title a:hover { background-size: 100% 1px; }
+.org { color: var(--muted); font-size: var(--step--1); }
+.org .type { font-style: italic; }
+.summary { margin: 0.35rem 0 0.55rem; max-width: 72ch; }
+.tags { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; }
+.stage {
+  --c: var(--muted);
+  font: 500 0.6875rem/1 var(--font-mono); text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--c); border: 1px solid var(--c); border-radius: 999px; padding: 0.3rem 0.55rem 0.28rem;
+}
+.stage[data-s="production"] { --c: var(--st-production); }
+.stage[data-s="flight"] { --c: var(--st-flight); }
+.stage[data-s="clinical"] { --c: var(--st-clinical); }
+.stage[data-s="field"] { --c: var(--st-field); }
+.stage[data-s="operations"] { --c: var(--st-operations); }
+.chip {
+  font: 400 var(--step--1)/1 var(--font-body); color: var(--ink); background: var(--chip);
+  border: 1px solid transparent; border-radius: 4px; padding: 0.3rem 0.5rem; cursor: pointer;
+}
+.chip:hover { border-color: var(--rule); }
+.chip[aria-pressed="true"] { background: var(--signal-soft); border-color: var(--signal); }
+.empty { padding: 3rem 0; color: var(--muted); }
+footer { padding-block: 1.5rem 3rem; color: var(--muted); font-size: var(--step--1); }
+
+@media (max-width: 760px) {
+  .masthead .wrap { grid-template-columns: 1fr; }
+  .loop { width: 108px; }
+  .filters .wrap { grid-template-columns: 1fr 1fr; }
+  .filters .field.search { grid-column: 1 / -1; }
+  .row { grid-template-columns: 1fr; gap: 0.15rem; }
+  .year { font-size: var(--step--1); }
+  .sortby { margin-left: 0; }
+}
+@media (prefers-reduced-motion: reduce) { .title a { transition: none; } }
+</style>
+<!--BODY-->
+<header class="masthead">
+  <div class="wrap">
+    <svg class="loop" viewBox="0 0 132 56" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <circle cx="16" cy="20" r="6"/>
+      <path d="M0 20h10M22 20h12"/>
+      <rect x="34" y="10" width="26" height="20" rx="2"/>
+      <path d="M60 20h12"/>
+      <rect x="72" y="10" width="26" height="20" rx="2"/>
+      <path d="M98 20h34M114 20v26H16V26"/>
+      <path class="sig" d="M100 6c4 0 5 9 9 9s4-6 7-6 3 4 5 4 3-2 5-2 3 1 6 1"/>
+      <text x="47" y="23.5" font-size="9" text-anchor="middle" fill="currentColor" stroke="none" font-family="var(--font-mono)">C</text>
+      <text x="85" y="23.5" font-size="9" text-anchor="middle" fill="currentColor" stroke="none" font-family="var(--font-mono)">P</text>
+      <text x="11" y="31" font-size="8" fill="currentColor" stroke="none" font-family="var(--font-mono)">−</text>
+    </svg>
+    <div>
+      <h1>Applied Control</h1>
+      <p>Papers, engineering blogs, reports, and talks on feedback systems that left the lab: flown, shipped, approved, or run in production.</p>
+      <div class="stats" id="stats"></div>
+    </div>
+  </div>
+</header>
+
+<section class="filters" aria-label="Filters">
+  <div class="wrap">
+    <div class="field search">
+      <label for="q">Search</label>
+      <input id="q" type="search" placeholder="Title, organization, summary…" autocomplete="off">
+    </div>
+    <div class="field">
+      <label for="f-domain">Domain</label>
+      <select id="f-domain"><option value="">All domains</option></select>
+    </div>
+    <div class="field">
+      <label for="f-method">Method</label>
+      <select id="f-method"><option value="">All methods</option></select>
+    </div>
+    <div class="field">
+      <label for="f-stage">Stage</label>
+      <select id="f-stage"><option value="">All stages</option></select>
+    </div>
+    <div class="field">
+      <label for="f-type">Format</label>
+      <select id="f-type"><option value="">All formats</option></select>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+  <div class="status">
+    <span id="count"></span>
+    <button class="reset" id="reset" type="button" hidden>Clear filters</button>
+    <div class="sortby" role="group" aria-label="Sort">
+      <button type="button" data-sort="new" aria-pressed="true">Newest</button>
+      <button type="button" data-sort="old" aria-pressed="false">Oldest</button>
+      <button type="button" data-sort="title" aria-pressed="false">A–Z</button>
+    </div>
+  </div>
+  <ol class="ledger" id="list"></ol>
+  <p class="empty" id="empty" hidden>No entries match these filters. Clear a filter or try a broader search term.</p>
+</main>
+
+<footer class="wrap">
+  Generated from the <code>data/</code> folder of the applied-control repository. Corrections and additions are welcome as pull requests.
+</footer>
+
+<script>
+const DATA = /*__DATA__*/null;
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const state = { q: "", domain: "", method: "", stage: "", type: "", sort: "new" };
+  const domainTitle = Object.fromEntries(DATA.domains.map((d) => [d.id, d.title]));
+  const entries = DATA.entries.map((e) => ({
+    ...e,
+    _hay: [e.title, e.org.join(" "), e.summary, e.topic, e.methods.join(" "), domainTitle[e.domain]].join(" ").toLowerCase(),
+  }));
+
+  function fillSelect(sel, items) {
+    for (const [value, label] of items) {
+      const o = document.createElement("option");
+      o.value = value; o.textContent = label; sel.appendChild(o);
+    }
+  }
+  const count = (key, val) => entries.filter((e) => (Array.isArray(e[key]) ? e[key].includes(val) : e[key] === val)).length;
+  fillSelect($("f-domain"), DATA.domains.map((d) => [d.id, `${d.title} (${count("domain", d.id)})`]));
+  const usedMethods = [...new Set(entries.flatMap((e) => e.methods))].sort((a, b) => a.localeCompare(b));
+  fillSelect($("f-method"), usedMethods.map((m) => [m, `${m} (${count("methods", m)})`]));
+  fillSelect($("f-stage"), Object.keys(DATA.stages).filter((s) => count("stage", s)).map((s) => [s, `${s} (${count("stage", s)})`]));
+  const usedTypes = [...new Set(entries.map((e) => e.type))].sort();
+  fillSelect($("f-type"), usedTypes.map((t) => [t, `${t} (${count("type", t)})`]));
+
+  const cases = entries.filter((e) => e.domain !== "resources");
+  const orgs = new Set(cases.flatMap((e) => e.org));
+  const years = cases.map((e) => e.year);
+  $("stats").innerHTML =
+    `<span><b>${cases.length}</b> case studies</span>` +
+    `<span><b>${entries.length - cases.length}</b> resources</span>` +
+    `<span><b>${orgs.size}</b> organizations</span>` +
+    `<span><b>${Math.min(...years)}–${Math.max(...years)}</b></span>`;
+
+  function el(tag, attrs, ...kids) {
+    const n = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs || {})) {
+      if (k === "text") n.textContent = v; else n.setAttribute(k, v);
+    }
+    for (const k of kids) if (k) n.appendChild(k);
+    return n;
+  }
+
+  function render() {
+    const terms = state.q.toLowerCase().split(/\s+/).filter(Boolean);
+    let rows = entries.filter((e) =>
+      (!state.domain || e.domain === state.domain) &&
+      (!state.method || e.methods.includes(state.method)) &&
+      (!state.stage || e.stage === state.stage) &&
+      (!state.type || e.type === state.type) &&
+      terms.every((t) => e._hay.includes(t)));
+    rows.sort(state.sort === "title" ? (a, b) => a.title.localeCompare(b.title)
+      : state.sort === "old" ? (a, b) => a.year - b.year || a.title.localeCompare(b.title)
+      : (a, b) => b.year - a.year || a.title.localeCompare(b.title));
+
+    const list = $("list");
+    list.replaceChildren();
+    const frag = document.createDocumentFragment();
+    for (const e of rows) {
+      const link = el("a", { href: e.url, target: "_blank", rel: "noopener", text: e.title });
+      const tags = el("div", { class: "tags" }, el("span", { class: "stage", "data-s": e.stage, text: e.stage }));
+      for (const m of e.methods) {
+        const b = el("button", { class: "chip", type: "button", "data-method": m, "aria-pressed": String(state.method === m), text: m });
+        tags.appendChild(b);
+      }
+      const org = el("div", { class: "org" });
+      org.textContent = e.org.join(", ") + " · ";
+      org.appendChild(el("span", { class: "type", text: e.type }));
+      frag.appendChild(el("li", { class: "row" },
+        el("div", { class: "year", text: String(e.year) }),
+        el("div", { class: "body" },
+          el("div", { class: "where", text: `${domainTitle[e.domain]} / ${e.topic}` }),
+          el("h2", { class: "title" }, link),
+          org,
+          el("p", { class: "summary", text: e.summary }),
+          tags)));
+    }
+    list.appendChild(frag);
+    $("empty").hidden = rows.length > 0;
+    $("count").innerHTML = `Showing <b>${rows.length}</b> of <b>${entries.length}</b>`;
+    $("reset").hidden = !(state.q || state.domain || state.method || state.stage || state.type);
+  }
+
+  $("q").addEventListener("input", (ev) => { state.q = ev.target.value; render(); });
+  for (const key of ["domain", "method", "stage", "type"]) {
+    $("f-" + key).addEventListener("change", (ev) => { state[key] = ev.target.value; render(); });
+  }
+  $("list").addEventListener("click", (ev) => {
+    const b = ev.target.closest("button[data-method]");
+    if (!b) return;
+    const m = b.dataset.method;
+    state.method = state.method === m ? "" : m;
+    $("f-method").value = state.method;
+    render();
+  });
+  document.querySelectorAll(".sortby button").forEach((b) => b.addEventListener("click", () => {
+    state.sort = b.dataset.sort;
+    document.querySelectorAll(".sortby button").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+    render();
+  }));
+  $("reset").addEventListener("click", () => {
+    Object.assign(state, { q: "", domain: "", method: "", stage: "", type: "" });
+    $("q").value = ""; ["domain", "method", "stage", "type"].forEach((k) => ($("f-" + k).value = ""));
+    render();
+  });
+  render();
+})();
+</script>

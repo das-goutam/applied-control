@@ -1,0 +1,82 @@
+# Controlled vocabularies used by scripts/build.py.
+# Add a new method tag here (with a one-line description) before using it in an entry.
+
+types:
+  paper: Peer-reviewed paper or preprint
+  blog: Engineering blog post or company write-up
+  report: Technical report, white paper, or agency document
+  talk: Recorded talk or lecture
+  video: Demonstration or explainer video
+  code: Source code repository or software project
+  book: Book or long-form guide
+  standard: Standard, regulation, or certification document
+
+stages:
+  production: Shipped in a commercial product or running in production software
+  flight: Flown on an aircraft, spacecraft, or launch vehicle
+  clinical: Used in human clinical trials or an approved medical device
+  field: Tested on real hardware or infrastructure outside the lab, not yet a product
+  operations: Running in an operating plant, grid, fleet, or facility (also used for surveys and books)
+
+methods:
+  PID: Proportional-integral-derivative feedback and its variants
+  gain scheduling: Controllers interpolated across operating points
+  LQR/LQG: Linear-quadratic regulation and Gaussian estimation
+  robust control: H-infinity, mu-synthesis, loop shaping, and related robust designs
+  MPC: Model predictive control with online optimization
+  nonlinear MPC: MPC with nonlinear prediction models
+  explicit MPC: MPC precomputed offline as a piecewise-affine controller
+  real-time optimization: Steady-state economic optimization layered above regulatory control
+  convex optimization: Guidance or control posed as a convex program solved onboard or online
+  trajectory optimization: Offline or online computation of open-loop or reference trajectories
+  optimal control: Pontryagin, calculus of variations, and related optimal control
+  predictor-corrector guidance: Guidance that repeatedly predicts the trajectory and corrects commands toward a target
+  trajectory prediction: Forward simulation of candidate maneuvers to decide when or how to intervene
+  rule-based logic: Hand-designed threshold and decision logic
+  adaptive control: Online adaptation of controller parameters (MRAC, L1, self-tuning)
+  sliding mode: Variable-structure and sliding-mode control
+  dynamic inversion: Nonlinear dynamic inversion and feedback linearization
+  impedance control: Impedance, admittance, and force control for physical interaction
+  whole-body control: Task-space control of floating-base robots via prioritized optimization
+  geometric control: Control on manifolds such as SO(3) and SE(3)
+  ZMP control: Balance control that regulates the zero-moment point of a legged robot
+  behavior-based control: Layered reactive behaviors arbitrated without a global model
+  visual servoing: Feedback driven directly by camera measurements
+  teleoperation: Human-in-the-loop remote control with force or motion feedback
+  virtual fixtures: Haptic constraints that guide or bound a human-operated tool
+  Kalman filtering: Kalman, extended, and unscented filters
+  state estimation: Observers, moving-horizon estimation, and sensor fusion
+  system identification: Building control-oriented models from data
+  iterative learning control: Trial-to-trial learning for repetitive tasks
+  repetitive control: Internal-model control of periodic references and disturbances
+  run-to-run control: Batch-to-batch feedback in semiconductor and batch processes
+  feedforward: Model-based or measured-disturbance feedforward
+  reinforcement learning: Policies learned from interaction, in simulation or on hardware
+  learning-based control: Data-driven models or controllers short of full RL
+  imitation learning: Policies learned from demonstrations
+  bandits: Bandit and online-learning feedback for allocation
+  dynamic programming: Bellman recursion, value iteration, and approximate DP
+  POMDP: Decision making under partial observability
+  control barrier functions: Safety filters based on barrier certificates
+  reachability: Reachable-set and invariance-based safety analysis
+  distributed control: Multi-agent, decentralized, or networked control
+  event-triggered control: Updates triggered by state or error conditions
+  extremum seeking: Model-free real-time optimization by perturbation
+  fault-tolerant control: Reconfiguration and accommodation of failures
+  fuzzy logic: Fuzzy rule-based control
+  expert systems: Rule-based supervisory control encoding operator knowledge
+  hybrid systems: Switched and mode-based controllers
+  game theory: Strategic and adversarial decision making
+  AIMD: Additive-increase multiplicative-decrease feedback
+  feedback control: Engineered feedback loops described without a named design method
+  queueing control: Feedback on queue length, delay, or concurrency
+  Lyapunov optimization: Drift-plus-penalty and related stochastic network control
+  wide-area control: Grid-scale control using synchronized phasor measurements
+  droop control: Proportional power-frequency or power-voltage sharing among sources
+  grid-forming control: Inverters that set grid voltage and frequency rather than follow them
+  transactive control: Market or price signals used to coordinate distributed loads
+  stochastic optimization: Decisions optimized against forecast uncertainty or risk
+  setpoint optimization: Choosing operating setpoints (for example yaw offsets) to optimize a plant-level objective
+  closed-loop neuromodulation: Stimulation adjusted by sensed neural biomarkers
+  rate-adaptive pacing: Cardiac pacing rate adjusted from sensed physiological signals
+  general: Broad coverage of control methods

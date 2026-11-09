@@ -1,0 +1,121 @@
+title: applied-control
+explorer_url: https://das-goutam.github.io/applied-control/
+tagline: >
+  Papers, engineering blogs, technical reports, and talks on control systems that left the lab:
+  how organizations model, estimate, optimize, tune, and verify feedback that runs on rockets,
+  cars, robots, plants, grids, patients, and production software.
+
+intro: |
+  Control theory runs much of the modern world, but the evidence of how it is used in practice is
+  scattered across flight-test reports, industrial journals, clinical trials, and company
+  engineering blogs. Inspired by [applied-ml](https://github.com/eugeneyan/applied-ml), this list
+  collects that evidence in one place, organized by application domain.
+
+  **What qualifies.** Every case-study entry documents a controller that actually ran outside the
+  lab, in a shipped product, on a flight vehicle, in patients, in an operating plant, or in
+  production software, and explains how it works. Simulation-only studies are out of scope. The
+  final section collects cross-cutting resources: industry surveys, open-source software with
+  documented deployments, practitioner talks, and books.
+
+related: |
+  - [eugeneyan/applied-ml](https://github.com/eugeneyan/applied-ml): the model for this list, covering machine learning in production.
+  - [A-make/awesome-control-theory](https://github.com/A-make/awesome-control-theory): resources for learning control theory.
+  - [jkoendev/optimal-control-literature-software](https://github.com/jkoendev/optimal-control-literature-software): literature and software for optimal control and MPC.
+  - [robotsorcerer/awesome-neurocontrol](https://github.com/robotsorcerer/awesome-neurocontrol): neural network methods in control.
+
+contributing: |
+  Additions and corrections are welcome. Entries live as YAML in [`data/`](data/), and the README
+  is generated from them. See [CONTRIBUTING.md](CONTRIBUTING.md) for the inclusion criteria, the
+  entry format, and how to run the validator.
+
+license: |
+  [MIT](LICENSE). Linked works belong to their respective authors and publishers. Summaries are
+  original paraphrases written for this list.
+
+domains:
+  - id: aerospace
+    file: aerospace.yaml
+    title: Aerospace & Space
+    blurb: Guidance, navigation, and control for launch vehicles, landers, spacecraft, aircraft, drones, and airspace safety.
+    topics:
+      - name: Launch & landing
+      - name: Planetary EDL & landers
+      - name: Spacecraft attitude & orbit control
+      - name: Aircraft flight control
+      - name: UAVs & drones
+      - name: Air traffic & collision avoidance
+  - id: automotive
+    file: automotive.yaml
+    title: Automotive, Rail & Maritime
+    blurb: Powertrain, chassis, driver assistance, autonomy, traffic flow, trains, and ships.
+    topics:
+      - name: Powertrain & energy management
+      - name: Vehicle dynamics & chassis
+      - name: ADAS & autonomous driving
+      - name: Traffic & mobility
+      - name: Rail
+      - name: Maritime
+  - id: robotics
+    file: robotics.yaml
+    title: Robotics
+    blurb: Legged machines, humanoids, manipulators, mobile and aerial robots, and robots that work on or near people.
+    topics:
+      - name: Legged locomotion
+      - name: Humanoids & whole-body control
+      - name: Manipulation & industrial arms
+      - name: Mobile, warehouse & field robots
+      - name: Aerial robotics
+      - name: Surgical robots
+      - name: Entertainment robots
+      - name: Space & underwater robots
+  - id: process
+    file: process.yaml
+    title: Process Industries & Manufacturing
+    blurb: Refineries, chemical and paper plants, metals, pharmaceuticals, semiconductors, and precision mechatronics.
+    topics:
+      - name: Refining & chemicals
+      - name: Pulp & paper
+      - name: Metals, mining & cement
+      - name: Pharmaceuticals
+      - name: Semiconductors & precision motion
+      - name: Oil & gas production
+  - id: energy
+    file: energy.yaml
+    title: Energy, Buildings & Infrastructure
+    blurb: Power grids, renewables, fusion, data centers, buildings, storage, and water networks.
+    topics:
+      - name: Power grids & storage
+      - name: Wind & solar
+      - name: Data centers
+      - name: Buildings & HVAC
+      - name: Nuclear & fusion
+      - name: Water & wastewater
+  - id: computing
+    file: computing.yaml
+    title: Computing, Networks & Marketplaces
+    blurb: Feedback inside software. Congestion control, video streaming, autoscaling, overload protection, ad pacing, and operations.
+    topics:
+      - name: Congestion control & networking
+      - name: Video streaming & adaptive bitrate
+      - name: Autoscaling & resource management
+      - name: Load shedding & overload control
+      - name: Ads, marketplaces & inventory
+  - id: biomedical
+    file: biomedical.yaml
+    title: Healthcare & Agriculture
+    blurb: Automated insulin delivery, anesthesia and ventilation, neuromodulation, prosthetics, and closed-loop agriculture.
+    topics:
+      - name: Glucose control & insulin delivery
+      - name: Anesthesia & critical care
+      - name: Neuromodulation & cardiac devices
+      - name: Prosthetics & rehabilitation
+      - name: Agriculture
+  - id: resources
+    file: resources.yaml
+    title: Resources
+    blurb: Cross-cutting material. Surveys of control in industry, open-source software with documented deployments, practitioner talks, and books.
+    topics:
+      - name: Industry surveys & impact reports
+      - name: Software with documented deployments
+      - name: Talks & videos
+      - name: Books & long-form guides

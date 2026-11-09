@@ -1,0 +1,371 @@
+# Energy, Buildings & Infrastructure. Schema and rules: see CONTRIBUTING.md.
+
+- title: "Hornsdale Power Reserve Expansion Virtual Machine Mode Actual vs Modelled Study"
+  url: https://arena.gov.au/assets/2023/09/HPRX-VMM-Modelled-vs-Actual-Report.pdf
+  org: ["Neoen", "Tesla"]
+  year: 2023
+  type: report
+  topic: "Power grids & storage"
+  methods: ["grid-forming control"]
+  stage: operations
+  summary: "Tesla's Virtual Machine Mode let the 150 MW Hornsdale battery provide synthetic inertia, and its measured response to an August 2022 frequency dip closely matched modelled behaviour."
+
+- title: "AI-Driven Smart Community Control for Accelerating PV Adoption and Enhancing Grid Resilience"
+  url: https://www.nrel.gov/docs/fy22osti/82576.pdf
+  org: ["NREL", "Holy Cross Energy"]
+  year: 2022
+  type: talk
+  topic: "Power grids & storage"
+  methods: ["MPC"]
+  stage: field
+  summary: "Home energy management and aggregator controls dispatched batteries, heat pump water heaters and thermostats in net-zero homes in Basalt, Colorado, shifting load out of the utility's peak window."
+
+- title: "Balancing and Frequency Control"
+  url: https://www.nerc.com/comm/RSTC_Reliability_Guidelines/Reference_Document_NERC_Balancing_and_Frequency_Control.pdf
+  org: ["NERC"]
+  year: 2021
+  type: report
+  topic: "Power grids & storage"
+  methods: ["droop control", "feedback control"]
+  stage: operations
+  summary: "NERC explains how North American balancing authorities control frequency, from governor droop response to AGC acting on area control error with frequency bias, judged by CPS1 and BAAL."
+
+- title: "Dalrymple ESCRI-SA Battery Energy Storage Project"
+  url: https://www.electranet.com.au/wp-content/uploads/2021/01/ESCRI-SA-presentation-to-SEPA-Energy-Storage-WG-April-2020.pdf
+  org: ["ElectraNet", "ABB"]
+  year: 2020
+  type: talk
+  topic: "Power grids & storage"
+  methods: ["grid-forming control", "droop control"]
+  stage: operations
+  summary: "ElectraNet and ABB describe a 30 MW grid-forming virtual-generator battery that kept a South Australian regional network supplied through planned and unplanned islanding events."
+
+- title: "Real-Time Optimization and Control of Next-Generation Distribution Infrastructure"
+  url: https://www.nrel.gov/docs/fy21osti/78742.pdf
+  org: ["NREL", "Southern California Edison", "Holy Cross Energy"]
+  year: 2020
+  type: talk
+  topic: "Power grids & storage"
+  methods: ["distributed control", "convex optimization"]
+  stage: field
+  summary: "NREL slides on real-time optimal power flow controllers for DERs, field-demonstrated for voltage regulation and virtual power plant operation at Stone Edge Farm microgrid and Holy Cross Energy homes."
+
+- title: "Design of the Pacific DC Intertie Wide Area Damping Controller"
+  url: https://doi.org/10.1109/TPWRS.2019.2903782
+  org: ["Sandia National Laboratories", "Bonneville Power Administration", "Montana Tech"]
+  year: 2019
+  type: paper
+  topic: "Power grids & storage"
+  methods: ["wide-area control"]
+  stage: field
+  summary: "Engineers designed a PMU-feedback controller that modulates Pacific DC Intertie power flow to damp inter-area oscillations, validated through open- and closed-loop tests on the Western Interconnection."
+
+- title: "PDCI Damping Controller Test Results and Project Summary"
+  url: https://www.sandia.gov/research/publications/details/pdci-damping-controller-test-results-and-project-summary-2019-05-01/
+  org: ["Sandia National Laboratories", "Bonneville Power Administration", "Montana Tech"]
+  year: 2019
+  type: report
+  topic: "Power grids & storage"
+  methods: ["wide-area control"]
+  stage: field
+  summary: "Final project report analyzing grid tests where real-time PMU feedback modulated HVDC power on the Pacific DC Intertie, assessing added oscillation damping and safe operation."
+
+- title: "Experimental Demonstration of Frequency Regulation by Commercial Buildings—Part II: Results and Performance Evaluation"
+  url: https://doi.org/10.1109/TSG.2016.2628893
+  org: ["UC Berkeley", "LBNL", "ETH Zurich"]
+  year: 2018
+  type: paper
+  topic: "Power grids & storage"
+  methods: ["MPC", "robust control", "Kalman filtering"]
+  stage: field
+  summary: "A test-cell air handler at LBNL's FLEXLAB tracked a PJM regulation signal using hierarchical robust MPC and fan-speed control, with tracking accuracy and occupant comfort measured experimentally."
+
+- title: "Initial operation of the Hornsdale Power Reserve Battery Energy Storage System"
+  url: https://www.aemo.com.au/-/media/Files/Media_Centre/2018/Initial-operation-of-the-Hornsdale-Power-Reserve.pdf
+  org: ["AEMO"]
+  year: 2018
+  type: report
+  topic: "Power grids & storage"
+  methods: ["droop control"]
+  stage: operations
+  summary: "AEMO review of the grid battery's first months, showing faster, more precise AGC regulation tracking than a steam unit and contingency frequency response during a real generator trip."
+
+- title: "Implementation and Rationale for PJM's Conditional Neutrality Regulation Signals"
+  url: https://www.pjm.com/-/media/committees-groups/task-forces/rmistf/postings/regulation-market-whitepaper.ashx
+  org: ["PJM"]
+  year: 2017
+  type: report
+  topic: "Power grids & storage"
+  methods: ["PID", "feedback control"]
+  stage: operations
+  summary: "PJM's January 2017 AGC redesign runs a PI controller on area control error, splitting output via low-pass filters into slow RegA and fast RegD signals with conditional storage payback."
+
+- title: "Pacific Northwest GridWise™ Testbed Demonstration Projects; Part I. Olympic Peninsula Project"
+  url: https://www.pnnl.gov/publications/pacific-northwest-gridwisetm-testbed-demonstration-projects-part-i-olympic-peninsula
+  org: ["PNNL"]
+  year: 2008
+  type: report
+  topic: "Power grids & storage"
+  methods: ["distributed control", "transactive control"]
+  stage: field
+  summary: "Field demonstration where thermostats, water heaters, building HVAC, municipal pumps and generators bid against five-minute price signals to relieve feeder congestion and reduce peak demand."
+
+- title: "Collective wind farm operation based on a predictive model increases utility-scale energy production"
+  url: https://doi.org/10.1038/s41560-022-01085-8
+  org: ["MIT", "Caltech", "ReNew Power"]
+  year: 2022
+  type: paper
+  topic: "Wind & solar"
+  methods: ["setpoint optimization"]
+  stage: field
+  summary: "Researchers working with ReNew Power deployed predictive-model-based collective yaw control at a utility-scale wind farm, measuring higher energy production than standard greedy turbine operation."
+
+- title: "Field experiment for open-loop yaw-based wake steering at a commercial onshore wind farm in Italy"
+  url: https://doi.org/10.5194/wes-6-159-2021
+  org: ["TU Delft", "GE Renewable Energy", "Enel Green Power", "TU Munich"]
+  year: 2021
+  type: paper
+  topic: "Wind & solar"
+  methods: ["setpoint optimization"]
+  stage: field
+  summary: "At Enel's Sardinian wind farm, GE turbines applied FLORIS lookup-table yaw offsets, toggled against baseline every 35 minutes, yielding gains up to 35% in some directions and losses elsewhere."
+
+- title: "Results from a wake-steering experiment at a commercial wind plant: investigating the wind speed dependence of wake-steering performance"
+  url: https://doi.org/10.5194/wes-6-1427-2021
+  org: ["NREL", "ENGIE"]
+  year: 2021
+  type: paper
+  topic: "Wind & solar"
+  methods: ["setpoint optimization"]
+  stage: field
+  summary: "NREL and ENGIE offset the wind-vane signal fed to an unmodified Senvion turbine's yaw controller at a French wind plant, cutting wake losses about 6% over three months."
+
+- title: "Initial results from a field campaign of wake steering applied at a commercial wind farm – Part 1"
+  url: https://doi.org/10.5194/wes-4-273-2019
+  org: ["NREL", "NextEra Energy Resources"]
+  year: 2019
+  type: paper
+  topic: "Wind & solar"
+  methods: ["setpoint optimization"]
+  stage: field
+  summary: "At a NextEra commercial wind farm, two turbines followed FLORIS-designed yaw offset schedules, raising downstream turbine energy about 14% in a narrow sector and pair output about 4%."
+
+- title: "Wind farm power optimization through wake steering"
+  url: https://doi.org/10.1073/pnas.1903680116
+  org: ["Stanford"]
+  year: 2019
+  type: paper
+  topic: "Wind & solar"
+  methods: ["setpoint optimization", "system identification"]
+  stage: field
+  summary: "A wake model calibrated on historical operating data was used to optimize yaw misalignment by gradient ascent, then field-tested at an Alberta wind farm with statistically significant power gains."
+
+- title: "Demonstration of Essential Reliability Services by a 300-MW Solar Photovoltaic Power Plant"
+  url: https://www.osti.gov/biblio/1349211
+  org: ["NREL", "CAISO", "First Solar"]
+  year: 2017
+  type: report
+  topic: "Wind & solar"
+  methods: ["droop control"]
+  stage: field
+  summary: "CAISO, First Solar and NREL tested a 300 MW PV plant's controls on the live grid, demonstrating AGC following, droop frequency response, ramp limiting and voltage regulation."
+
+- title: "Field test of wake steering at an offshore wind farm"
+  url: https://doi.org/10.5194/wes-2-229-2017
+  org: ["NREL", "Envision Energy"]
+  year: 2017
+  type: paper
+  topic: "Wind & solar"
+  methods: ["setpoint optimization"]
+  stage: field
+  summary: "NREL and Envision modified yaw controllers on turbines at a commercial offshore wind farm in China to apply FLORIS-optimized wake steering, measuring power gains comparable to model predictions."
+
+- title: "Advanced Grid-Friendly Controls Demonstration Project for Utility-Scale PV Power Plants"
+  url: https://www.osti.gov/biblio/1236761
+  org: ["NREL", "AES", "First Solar"]
+  year: 2016
+  type: report
+  topic: "Wind & solar"
+  methods: ["droop control"]
+  stage: field
+  summary: "NREL and plant owners field-tested active power controls on utility-scale PV plants in Puerto Rico and Texas, covering frequency regulation, variability smoothing and power quality support."
+
+- title: "Field testing of linear individual pitch control on the two-bladed controls advanced research turbine"
+  url: https://www.osti.gov/biblio/1239055
+  org: ["TU Delft", "NREL"]
+  year: 2016
+  type: paper
+  topic: "Wind & solar"
+  methods: ["gain scheduling"]
+  stage: field
+  summary: "TU Delft and NREL field-tested linear individual pitch control, gain-scheduled on rotor speed, on the two-bladed CART2 turbine, significantly reducing periodic loads below and above rated wind."
+
+- title: "Field Testing of Feedforward Collective Pitch Control on the CART2 Using a Nacelle-Based Lidar Scanner"
+  url: https://nrel.gov/docs/fy15osti/55222.pdf
+  org: ["NREL", "University of Stuttgart"]
+  year: 2014
+  type: paper
+  topic: "Wind & solar"
+  methods: ["feedforward"]
+  stage: field
+  summary: "On NREL's CART2 turbine, a feedforward pitch term driven by nacelle lidar wind preview cut generator speed variation about 30% and tower loads about 10% when correlation was good."
+
+- title: "Simulator-based reinforcement learning for data center cooling optimization"
+  url: https://engineering.fb.com/2024/09/10/data-center-engineering/simulator-based-reinforcement-learning-for-data-center-cooling-optimization/
+  org: ["Meta"]
+  year: 2024
+  type: blog
+  topic: "Data centers"
+  methods: ["reinforcement learning"]
+  stage: field
+  summary: "Meta trained an RL agent in a thermal simulator and piloted it controlling supply-airflow setpoints in a live data center, cutting fan energy about 20% while staying within temperature limits."
+
+- title: "Carbon-Aware Computing for Datacenters"
+  url: https://arxiv.org/abs/2106.11750
+  org: ["Google"]
+  year: 2021
+  type: paper
+  topic: "Data centers"
+  methods: ["stochastic optimization"]
+  stage: production
+  summary: "Google's fleet-wide system forecasts grid carbon intensity and demand, then solves a risk-aware day-ahead optimization to cap flexible compute hourly, shifting load toward cleaner hours in production."
+
+- title: "Data center cooling using model-predictive control"
+  url: https://research.google/pubs/data-center-cooling-using-model-predictive-control/
+  org: ["Google"]
+  year: 2018
+  type: paper
+  topic: "Data centers"
+  methods: ["MPC", "system identification", "reinforcement learning"]
+  stage: field
+  summary: "Google identified a data-driven dynamics model of a server floor within hours of exploration and used it in MPC to regulate temperatures and airflow, outperforming the existing controllers."
+
+- title: "Safety-first AI for autonomous data centre cooling and industrial control"
+  url: https://deepmind.google/blog/safety-first-ai-for-autonomous-data-centre-cooling-and-industrial-control/
+  org: ["Google DeepMind", "Google"]
+  year: 2018
+  type: blog
+  topic: "Data centers"
+  methods: ["learning-based control"]
+  stage: production
+  summary: "Cloud-based neural-network system directly sets cooling actions every five minutes in multiple Google data centres, with local safety verification and operator override, reaching about 30% energy savings."
+
+- title: "DeepMind AI Reduces Google Data Centre Cooling Bill by 40%"
+  url: https://deepmind.google/discover/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-by-40/
+  org: ["Google DeepMind", "Google"]
+  year: 2016
+  type: blog
+  topic: "Data centers"
+  methods: ["learning-based control"]
+  stage: field
+  summary: "Neural-network ensembles predicting PUE, temperature and pressure produced cooling recommendations that, in live tests at a Google data centre, cut cooling energy by roughly 40 percent."
+
+- title: "Commercial building HVAC demand flexibility with model predictive control: Field demonstration and literature insights"
+  url: https://doi.org/10.1016/j.enbuild.2025.116097
+  org: ["LBNL"]
+  year: 2025
+  type: paper
+  topic: "Buildings & HVAC"
+  methods: ["MPC"]
+  stage: field
+  summary: "LBNL ran price-responsive MPC on a large Berkeley office building's HVAC across four seasons, using thermal mass to cut HVAC demand 40-65% during high-price periods versus rule-based control."
+
+- title: "Controlling Commercial Cooling Systems Using Reinforcement Learning"
+  url: https://arxiv.org/abs/2211.07357
+  org: ["Google DeepMind", "Google", "Trane Technologies"]
+  year: 2022
+  type: paper
+  topic: "Buildings & HVAC"
+  methods: ["reinforcement learning"]
+  stage: field
+  summary: "DeepMind, Google and Trane extended data-center RL control to commercial building cooling plants, running live experiments at two facilities that saved roughly 9% and 13% energy."
+
+- title: "eco+ Thermostat Optimization Pilot"
+  url: https://www.ecobee.com/ecoplusemv
+  org: ["ecobee", "Demand Side Analytics"]
+  year: 2020
+  type: report
+  topic: "Buildings & HVAC"
+  methods: ["learning-based control"]
+  stage: production
+  summary: "Randomized evaluation across roughly 240,000 ecobee thermostats of personalized pre-cooling, setback and scheduling algorithms, measuring about 1 kW demand-response reduction per device and 5-6% energy savings."
+
+- title: "Model Predictive Climate Control of a Swiss Office Building: Implementation, Results, and Cost-Benefit Analysis"
+  url: https://doi.org/10.1109/TCST.2015.2415411
+  org: ["ETH Zurich"]
+  year: 2016
+  type: paper
+  topic: "Buildings & HVAC"
+  methods: ["MPC"]
+  stage: field
+  summary: "ETH Zurich implemented MPC for the climate control system of an occupied Swiss office building, reporting measured comfort and energy performance plus a cost-benefit analysis of deployment."
+
+- title: "Experimental analysis of model predictive control for an energy efficient building heating system"
+  url: https://doi.org/10.1016/j.apenergy.2011.03.009
+  org: ["University of West Bohemia", "Czech Technical University in Prague", "ETH Zurich"]
+  year: 2011
+  type: paper
+  topic: "Buildings & HVAC"
+  methods: ["MPC"]
+  stage: field
+  summary: "Weather-forecast-based MPC ran the heating system of a real Prague building during a two-month experiment, with energy use compared against the conventional heating controller."
+
+- title: "Avoiding fusion plasma tearing instability with deep reinforcement learning"
+  url: https://doi.org/10.1038/s41586-024-07024-9
+  org: ["Princeton University", "PPPL"]
+  year: 2024
+  type: paper
+  topic: "Nuclear & fusion"
+  methods: ["reinforcement learning"]
+  stage: field
+  summary: "An RL controller deployed on the DIII-D tokamak adjusted actuators in real time to keep predicted tearing-instability likelihood below a threshold while sustaining H-mode performance."
+
+- title: "Towards practical reinforcement learning for tokamak magnetic control"
+  url: https://arxiv.org/abs/2307.11546
+  org: ["Google DeepMind", "EPFL"]
+  year: 2023
+  type: paper
+  topic: "Nuclear & fusion"
+  methods: ["reinforcement learning"]
+  stage: field
+  summary: "Follow-up work improving RL magnetic controllers' shape accuracy, plasma-current bias and training time, with the gains validated in new discharges on the TCV tokamak."
+
+- title: "Magnetic control of tokamak plasmas through deep reinforcement learning"
+  url: https://doi.org/10.1038/s41586-021-04301-9
+  org: ["Google DeepMind", "EPFL"]
+  year: 2022
+  type: paper
+  topic: "Nuclear & fusion"
+  methods: ["reinforcement learning"]
+  stage: field
+  summary: "A deep RL policy trained in simulation directly commanded the TCV tokamak's magnetic coils, producing and holding a variety of plasma shapes in real experimental discharges."
+
+- title: "Full-scale implementation of an advanced control system on a biological wastewater treatment plant"
+  url: https://doi.org/10.1016/j.ifacol.2016.07.360
+  org: ["Aalto University", "Mipro"]
+  year: 2016
+  type: paper
+  topic: "Water & wastewater"
+  methods: ["MPC"]
+  stage: operations
+  summary: "A dynamic matrix controller regulating effluent ammonia through aeration, plus PCA-based sensor monitoring, ran six months at a full-scale activated-sludge plant and lowered aeration energy."
+
+- title: "Control of Large-Scale Irrigation Networks"
+  url: https://doi.org/10.1109/JPROC.2006.887289
+  org: ["University of Melbourne"]
+  year: 2007
+  type: paper
+  topic: "Water & wastewater"
+  methods: ["distributed control", "system identification"]
+  stage: production
+  summary: "Melbourne researchers present system identification and decentralized feedback design for automating gravity-fed irrigation channels in Victoria, the approach behind Rubicon's commercially deployed Total Channel Control."
+
+- title: "Systems Engineering for Irrigation Systems: Successes and Challenges"
+  url: https://skoge.folk.ntnu.no/prost/proceedings/ifac2005/Fullpapers/05174.pdf
+  org: ["University of Melbourne"]
+  year: 2005
+  type: paper
+  topic: "Water & wastewater"
+  methods: ["PID", "feedforward", "distributed control", "system identification"]
+  stage: field
+  summary: "Overview of irrigation canal automation covering closed-loop system identification and decentralized PI-plus-feedforward water-level control, illustrated with field data from Victoria's Haughton Main Canal."
